@@ -178,6 +178,8 @@ body{
     max-width:60ch;
 }
 
+.page2-header-print{display:none;}
+
 .actions{margin-top:1rem;display:flex;gap:8px;flex-wrap:wrap;}
 .btn{
     display:inline-flex;
@@ -406,15 +408,17 @@ body{
 }
 
 @media print{
-    :root{--sidebar-w:56mm;}
+    :root{
+        --sidebar-w:27%;
+    }
 
     html,body{
         background:#fff !important;
-        width:210mm;
-        font-size:8.5pt;
-        line-height:1.4;
-        padding-top:8mm;
-        padding-bottom:8mm;
+        width:100%;
+        font-size:8pt;
+        line-height:1.35;
+        padding-top:3%;
+        padding-bottom:3%;
     }
 
     *{
@@ -425,7 +429,7 @@ body{
 
     .page{
         max-width:none;
-        width:210mm;
+        width:100%;
         min-height:auto;
         margin:0;
         box-shadow:none;
@@ -436,9 +440,9 @@ body{
     .print-stripe{
         display:block !important;
         position:fixed;
-        top:-20mm;
+        top:-10%;
         left:0;
-        width:56mm;
+        width:27%;
         height:200vh;
         background:#0b1729 !important;
         z-index:0;
@@ -449,24 +453,24 @@ body{
         position:relative;
         z-index:1;
         background:transparent !important;
-        width:56mm;
+        width:27%;
         float:left;
-        padding:0 4mm 4mm;
+        padding:0 2% 2%;
     }
-    .sidebar h1.sidebar-name{font-size:12.5px;color:#ffffff !important;}
-    .sidebar .sidebar-role{font-size:8px;color:#8fa3bd !important;}
+    .sidebar h1.sidebar-name{font-size:1.1em;color:#ffffff !important;}
+    .sidebar .sidebar-role{font-size:0.7em;color:#8fa3bd !important;}
     .sidebar h2{
-        margin-top:0.85rem;padding-top:.55rem;font-size:8px;letter-spacing:.7px;
+        margin-top:0.8em;padding-top:0.5em;font-size:0.7em;letter-spacing:0.05em;
         color:#38bdf8 !important;
         border-top-color:rgba(255,255,255,.08) !important;
     }
     .sidebar ul{list-style:none !important;padding:0 !important;}
-    .sidebar li{font-size:9px;line-height:1.4;margin-bottom:3px;color:#c3cfdd !important;}
+    .sidebar li{font-size:0.75em;line-height:1.35;margin-bottom:0.2em;color:#c3cfdd !important;}
     .sidebar li .ic{color:#38bdf8 !important;}
     .sidebar a{color:#7dd3fc !important;text-decoration:none !important;}
 
     .tag{
-        font-size:8px;padding:1.5px 5px;margin-bottom:3.5px;
+        font-size:0.68em;padding:2px 5px;margin-bottom:3px;
         background:rgba(56,189,248,.12) !important;
         color:#7dd3fc !important;
         border:.5px solid rgba(56,189,248,.3) !important;
@@ -479,8 +483,8 @@ body{
     }
 
     .photo-wrap{
-        width:68px;height:68px;
-        margin:0 auto .5rem !important;
+        width:60px;height:60px;
+        margin:0 auto 0.5em !important;
         border:2px solid rgba(56,189,248,.45) !important;
         border-radius:50% !important;
         overflow:hidden !important;
@@ -491,27 +495,27 @@ body{
 
     /* ── MAIN ── */
     .main{
-        margin-left:56mm;
-        padding:0 8mm 4mm 6mm;
+        margin-left:27%;
+        padding:0 4% 2% 3%;
         background:#fff !important;
     }
 
-    .header{margin-bottom:0.9rem;padding-bottom:0.7rem;border-bottom:1px solid #e2e8f0 !important;}
-    .name{font-size:19pt;margin-bottom:2px;color:#0b1220 !important;letter-spacing:-.5px !important;}
-    .tagline{font-size:10px;color:#0369a1 !important;font-weight:600 !important;}
-    .summary{font-size:9.2pt;line-height:1.45;margin-top:.45rem;color:#475569 !important;}
+    .header{margin-bottom:0.8em;padding-bottom:0.6em;border-bottom:1px solid #e2e8f0 !important;}
+    .name{font-size:1.8em;margin-bottom:2px;color:#0b1220 !important;letter-spacing:-0.03em !important;}
+    .tagline{font-size:0.85em;color:#0369a1 !important;font-weight:600 !important;}
+    .summary{font-size:0.8em;line-height:1.4;margin-top:0.4em;color:#475569 !important;}
     .actions{display:none !important;}
 
-    .section{margin-bottom:0.9rem;}
+    .section{margin-bottom:0.8em;}
     .section-title{
-        font-size:9pt;margin-bottom:.6rem;padding-bottom:3.5px;
+        font-size:0.8em;margin-bottom:0.5em;padding-bottom:3px;
         color:#0b1220 !important;
         border-bottom:1px solid #d1d5db !important;
     }
     .section-title::before{background:#0ea5e9 !important;height:2px !important;}
 
     /* ── experience ── */
-    .job{margin-bottom:0.8rem;padding-left:12px;}
+    .job{margin-bottom:0.65em;padding-left:12px;}
     .job::before{
         width:4px;height:4px;top:4px;
         background:#0ea5e9 !important;
@@ -520,66 +524,84 @@ body{
     }
     .job::after{left:1px;top:12px;width:1px !important;background:#d1d5db !important;}
     .job:last-child::after{display:none !important;}
-    .job-title{font-size:10.5pt;color:#0b1220 !important;font-weight:600 !important;}
-    .job-company{font-size:9.2pt;color:#0369a1 !important;font-weight:500 !important;}
-    .job-date{font-size:8pt;color:#6b7280 !important;}
-    .jb-label{font-size:9pt;margin-bottom:1.5px;color:#0b1220 !important;font-weight:600 !important;}
-    .jb-text{font-size:8.8pt;line-height:1.4;color:#374151 !important;}
+    .job-title{font-size:0.9em;color:#0b1220 !important;font-weight:600 !important;}
+    .job-company{font-size:0.8em;color:#0369a1 !important;font-weight:500 !important;}
+    .job-date{font-size:0.7em;color:#6b7280 !important;}
+    .jb-label{font-size:0.78em;margin-bottom:1px;color:#0b1220 !important;font-weight:600 !important;}
+    .jb-text{font-size:0.75em;line-height:1.35;color:#374151 !important;}
     .jb-text strong{color:#0b1220 !important;font-weight:600 !important;}
-    .job-block{margin-top:4px;}
-    .job-block + .job-block{margin-top:4px;}
-    .job-plain{font-size:8.8pt;line-height:1.4;margin-top:4px;color:#374151 !important;}
+    .job-block{margin-top:3px;}
+    .job-block + .job-block{margin-top:3px;}
+    .job-plain{font-size:0.75em;line-height:1.35;margin-top:3px;color:#374151 !important;}
     .job-plain strong{color:#0b1220 !important;}
 
-    /* Interruzione di pagina pulita ed elegamento del blocco certificazioni in Pagina 2 */
+    /* Forza l'Esperienza Professionale nella Pagina 1 */
     .page-break-after-exp {
         page-break-after: always;
         break-after: page;
     }
 
-    .cert-section {
-        padding-top: 12mm; /* Distanzia il titolo delle certificazioni dall'inizio della Pagina 2 */
+    /* Intestazione della Pagina 2 */
+    .page2-header-print {
+        display: block !important;
+        padding-top: 5vh; /* Adattamento relativo per non attaccare al bordo alto */
+        margin-bottom: 1rem;
+        border-bottom: 1px solid #e2e8f0;
+        padding-bottom: 0.6rem;
+    }
+    .page2-header-print .p2-name {
+        font-size: 1.4em;
+        font-weight: 700;
+        color: #0b1220;
+        margin: 0;
+    }
+    .page2-header-print .p2-role {
+        font-size: 0.85em;
+        color: #0369a1;
+        font-weight: 600;
+        margin: 2px 0 0;
     }
 
     /* ── certifications ── */
-    .cert-group{margin-bottom:0.85rem;page-break-inside:avoid;break-inside:avoid;}
-    .cert-group-title{font-size:9.5pt;color:#0b1220 !important;font-weight:600 !important;}
+    .cert-group{margin-bottom:0.65em;page-break-inside:avoid;break-inside:avoid;}
+    .cert-group-title{font-size:0.82em;color:#0b1220 !important;font-weight:600 !important;}
     .cg-count{
-        font-size:7.5pt;padding:1px 4px;
+        font-size:0.65em;padding:0 3px;
         background:#e8ecf1 !important;
         color:#6b7280 !important;
         border-radius:20px !important;
     }
-    .cert-group-desc{font-size:8.5pt;margin-bottom:6px;color:#6b7280 !important;}
+    .cert-group-desc{font-size:0.72em;margin-bottom:4px;color:#6b7280 !important;}
 
-    .badge-gallery{gap:5px;page-break-inside:avoid;break-inside:avoid;}
+    .badge-gallery{gap:4px;page-break-inside:avoid;break-inside:avoid;}
     .badge-card{
-        width:64px;
-        padding:5px 4px 4px;
-        border-radius:6px !important;
+        width:calc(16% - 4px); /* Adattamento percentuale flessibile */
+        min-width:52px;
+        padding:4px 3px 3px;
+        border-radius:5px !important;
         border:1px solid #c7d2dd !important;
         background:#f7f9fc !important;
         box-shadow:none !important;
         transform:none !important;
     }
-    .badge-card img{width:30px;height:30px;margin-bottom:3px;}
-    .badge-title{font-size:6.8pt;line-height:1.15;color:#1e293b !important;font-weight:600 !important;}
-    .badge-issuer{font-size:5.8pt;margin-top:2px;color:#6b7280 !important;}
+    .badge-card img{width:24px;height:24px;margin-bottom:2px;}
+    .badge-title{font-size:0.55em;line-height:1.1;color:#1e293b !important;font-weight:600 !important;}
+    .badge-issuer{font-size:0.48em;margin-top:1px;color:#6b7280 !important;}
 
     /* ── lenovo ── */
-    .lenovo-grid{gap:2px 14px;page-break-inside:avoid;break-inside:avoid;}
+    .lenovo-grid{gap:0 10px;page-break-inside:avoid;break-inside:avoid;}
     .lenovo-item{
-        font-size:8.5pt;padding:3.5px 0;
+        font-size:0.75em;padding:2px 0;
         color:#1e293b !important;
         border-bottom:1px solid #e5e7eb !important;
         text-decoration:none !important;
     }
     .lenovo-item:hover{background:transparent !important;}
-    .lenovo-item img{width:12px;height:12px;}
-    .lenovo-valid{font-size:7pt;color:#6b7280 !important;}
+    .lenovo-item img{width:10px;height:10px;}
+    .lenovo-valid{font-size:0.6em;color:#6b7280 !important;}
 
     .footer{
-        font-size:8pt;margin-top:1.2rem;padding-top:.6rem;
+        font-size:0.68em;margin-top:0.8em;padding-top:0.4em;
         color:#6b7280 !important;
         border-top:1px solid #d1d5db !important;
         page-break-inside:avoid;
@@ -850,8 +872,14 @@ body{
             </article>
         </section>
 
+        <!-- HEADER PAGINA 2 (In Stampa) -->
+        <div class="page2-header-print">
+            <div class="p2-name">Filippo Spada</div>
+            <div class="p2-role">System &amp; Network Engineer — Enterprise Infrastructure &amp; Security</div>
+        </div>
+
         <!-- CERTIFICAZIONI -->
-        <section class="section cert-section">
+        <section class="section">
             <h2 class="section-title">Certificazioni &amp; badge verificati</h2>
 
             <div class="cert-group">
