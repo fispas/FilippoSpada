@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae - Filippo Antonino Spada</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 12mm 15mm;
+            background-color: #f8fafc;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #1e293b;
+            background-color: #f8fafc;
+            line-height: 1.5;
+            font-size: 10pt;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #0f172a;
+            color: #ffffff;
+            padding: 24px 28px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            margin: 0 0 6px 0;
+            font-size: 20pt;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: #ffffff;
+        }
+
+        .header .subtitle {
+            font-size: 11pt;
+            color: #38bdf8;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 14px;
+        }
+
+        .contact-bar {
+            display: table;
+            width: 100%;
+            border-top: 1px solid #334155;
+            padding-top: 12px;
+            font-size: 9pt;
+            color: #cbd5e1;
+        }
+
+        .contact-item {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .section {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 18px 22px;
+            margin-bottom: 16px;
+            page-break-inside: avoid;
+        }
+
+        .section-title {
+            font-size: 12pt;
+            font-weight: 700;
+            color: #0f172a;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-left: 4px solid #0284c7;
+            padding-left: 10px;
+            margin: 0 0 14px 0;
+        }
+
+        .job-title {
+            font-size: 11pt;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .job-company {
+            font-size: 10pt;
+            color: #0284c7;
+            font-weight: 600;
+        }
+
+        .job-date {
+            font-size: 9pt;
+            color: #64748b;
+            float: right;
+            font-weight: 500;
+        }
+
+        .job-header {
+            margin-bottom: 10px;
+            border-bottom: 1px dashed #e2e8f0;
+            padding-bottom: 6px;
+        }
+
+        ul.skills-list {
+            margin: 0;
+            padding-left: 18px;
+        }
+
+        ul.skills-list li {
+            margin-bottom: 5px;
+            color: #334155;
+        }
+
+        .skills-grid {
+            display: table;
+            width: 100%;
+        }
+
+        .skills-col {
+            display: table-cell;
+            width: 50%;
+            vertical-align: top;
+        }
+
+        .skills-col:first-child {
+            padding-right: 12px;
+        }
+
+        .skills-col:last-child {
+            padding-left: 12px;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: #f1f5f9;
+            color: #334155;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 8.5pt;
+            font-weight: 600;
+            margin-right: 4px;
+            margin-bottom: 6px;
+            border: 1px solid #cbd5e1;
+        }
+
+        .footer-privacy {
+            font-size: 8pt;
+            color: #94a3b8;
+            margin-top: 15px;
+            text-align: justify;
+            line-height: 1.3;
+        }
+
+        /* Standard download button visible in browser view */
+        .download-btn {
+            display: inline-block;
+            background-color: #0284c7;
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 9pt;
+            margin-top: 10px;
+        }
+
+        @media print {
+            .download-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Filippo Antonino Spada</h1>
+        <div class="subtitle">System & Network Engineer | Enterprise Infrastructure & Security Specialist</div>
+        
+        <div class="contact-bar">
+            <div class="contact-item">
+                📍 Pace del Mela (ME) | Catania<br>
+                📞 +39 392 0626718
+            </div>
+            <div class="contact-item" style="text-align: right;">
+                ✉️ filispada@gmail.com<br>
+                🚗 Patente B
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Esperienze Professionali</div>
+        
+        <div class="job-header">
+            <span class="job-date">11/2019 – In corso</span>
+            <span class="job-title">Sistemista Informatico Senior</span><br>
+            <span class="job-company">Ricca IT S.r.l. – Catania</span>
+        </div>
+        <ul class="skills-list">
+            <li><strong>Sistemi Operativi & Directory Services:</strong> Gestione e ottimizzazione di ambienti aziendali Microsoft Windows Server e Linux; amministrazione avanzata di Active Directory, Group Policy (GPO), DNS e DHCP.</li>
+            <li><strong>Virtualizzazione & Datacenter:</strong> Gestione, installazione, configurazione e upgrade di infrastrutture VMware vSphere (5.x / 6.x / 7.x / 8.x) e vCenter. Host provisioning e gestione macchine virtuali.</li>
+            <li><strong>Networking & Security:</strong> Configurazione di apparecchiature di rete (switch, router, load balancer), protocolli TCP/IP, NFS, CIFS/SMB. Amministrazione di soluzioni di sicurezza e firewall Fortinet, configurazione VPN enterprise.</li>
+            <li><strong>Cloud & Enterprise Services:</strong> Configurazione e gestione tenant Microsoft 365, Exchange Online, SharePoint Online. Progettazione e deploy di Farm Terminal Server / Remote Desktop Services (RDS).</li>
+            <li><strong>Data Protection & Storage:</strong> Definizione ed esecuzione di strategie di Backup e Disaster Recovery tramite Veeam Backup & Replication; gestione storage SAN/NAS.</li>
+        </ul>
+
+        <div class="job-header" style="margin-top: 18px;">
+            <span class="job-date">01/2012 – 09/2018</span>
+            <span class="job-title">Sviluppatore Full Stack Freelance</span><br>
+            <span class="job-company">Pace del Mela (ME)</span>
+        </div>
+        <ul class="skills-list">
+            <li>Sviluppo di applicazioni web e mobile trasversali tramite moderni standard e framework: ReactJS, React Native, Redux, FLUX, JavaScript (ES6+), HTML5, CSS3, jQuery.</li>
+            <li>Progettazione backend e database con NodeJS, MongoDB e integrazione API REST.</li>
+            <li>Controllo versione e collaborazione del codice con Git e workflow dedicati.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Competenze Tecniche</div>
+        <div class="skills-grid">
+            <div class="skills-col">
+                <span class="badge">Windows Server</span>
+                <span class="badge">Linux</span>
+                <span class="badge">Active Directory</span>
+                <span class="badge">VMware vSphere / vCenter</span>
+                <span class="badge">Fortinet / Firewalls</span>
+                <span class="badge">Veeam Backup & Disaster Recovery</span>
+            </div>
+            <div class="skills-col">
+                <span class="badge">Microsoft 365 / Exchange / SharePoint</span>
+                <span class="badge">Networking (TCP, NFS, CIFS)</span>
+                <span class="badge">Terminal Server / RDS</span>
+                <span class="badge">ReactJS / React Native</span>
+                <span class="badge">NodeJS / MongoDB</span>
+                <span class="badge">Git / Automation</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Istruzione & Certificazioni</div>
+        <ul class="skills-list">
+            <li><strong>DataCore Certified Sales Professional (DCSP)</strong> – Certificazione Sales (07/2021)</li>
+            <li><strong>Diploma di Perito in Elettronica e Telecomunicazioni</strong> – ITIS "Ettore Majorana", Milazzo (07/2011) | Diploma N° 219707</li>
+        </ul>
+    </div>
+
+    <div class="footer-privacy">
+        Autorizzo il trattamento dei dati personali contenuti nel mio CV ex art. 13 del decreto legislativo 196/2003 e art. 13 del regolamento UE 2016/679 (GDPR) sulla protezione dei singoli cittadini in merito al trattamento dei dati personali.
+    </div>
+
+</body>
+</html>
