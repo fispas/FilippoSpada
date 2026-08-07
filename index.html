@@ -402,7 +402,7 @@ body{
 /* ══════════ PRINT / PDF ══════════ */
 @page{
     size:A4;
-    margin:0;
+    margin:12mm 0;
 }
 
 @media print{
@@ -434,9 +434,10 @@ body{
     .print-stripe{
         display:block !important;
         position:fixed;
-        top:0;left:0;
+        top:-20mm;
+        left:0;
         width:56mm;
-        height:100vh;
+        height:200vh;
         background:#0b1729 !important;
         z-index:0;
     }
@@ -448,7 +449,7 @@ body{
         background:transparent !important;
         width:56mm;
         float:left;
-        padding:8mm 5mm 6mm;
+        padding:0 5mm 6mm;
     }
     .sidebar h1.sidebar-name{font-size:13px;color:#ffffff !important;}
     .sidebar .sidebar-role{font-size:8px;color:#8fa3bd !important;}
@@ -489,7 +490,7 @@ body{
     /* ── MAIN ── */
     .main{
         margin-left:56mm;
-        padding:8mm 8mm 6mm;
+        padding:0 10mm 6mm 8mm;
         background:#fff !important;
     }
 
