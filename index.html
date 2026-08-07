@@ -3,329 +3,731 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Curriculum Vitae - Filippo Antonino Spada</title>
+<title>Filippo Antonino Spada — System &amp; Network Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
-*, *::before, *::after { box-sizing: border-box; }
-
-body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    color: #1e293b;
-    background: #eef1f5;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
+:root{
+    --ink:#0b1220;
+    --ink-2:#1e293b;
+    --body:#475569;
+    --muted:#94a3b8;
+    --line:#e6ebf1;
+    --line-soft:#f2f5f8;
+    --accent:#0ea5e9;
+    --accent-deep:#0369a1;
+    --navy:#0b1729;
+    --navy-2:#132339;
+    --sidebar-w:252px;
 }
 
-.page {
-    max-width: 960px;
-    margin: 0 auto;
-    background: #ffffff;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.07);
-    display: grid;
-    grid-template-columns: 235px 1fr;
-    min-height: 100vh;
+*,*::before,*::after{box-sizing:border-box;}
+
+html{-webkit-text-size-adjust:100%;}
+
+body{
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink-2);
+    background:#e8ecf1;
+    line-height:1.6;
+    margin:0;
+    padding:0;
+    -webkit-font-smoothing:antialiased;
+    font-feature-settings:"kern" 1,"liga" 1;
 }
 
-/* ── SIDEBAR ── */
-.sidebar {
-    background: #0f172a;
-    color: #e2e8f0;
-    padding: 2.4rem 1.5rem;
-}
-.sidebar-name { font-size: 16px; font-weight: 700; margin: 0; color: #fff; letter-spacing: -0.3px; }
-.sidebar-role { font-size: 10px; color: #94a3b8; margin: 4px 0 0; font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px; }
-
-.sidebar h2 {
-    font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
-    margin: 1.8rem 0 0.7rem; padding-top: 1.2rem;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    color: #38bdf8;
-}
-.sidebar h2:first-of-type { border: none; margin-top: 1.6rem; padding-top: 0; }
-
-.sidebar ul { list-style: none; padding: 0; margin: 0; }
-.sidebar li { font-size: 12.5px; line-height: 1.7; color: #cbd5e1; margin-bottom: 2px; }
-.sidebar a { color: #38bdf8; text-decoration: none; font-weight: 500; }
-
-.tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 2px; }
-.tag {
-    display: inline-block;
-    background: rgba(56,189,248,0.1);
-    color: #7dd3fc;
-    padding: 3px 8px;
-    border-radius: 3px;
-    font-size: 11px;
-    border: 0.5px solid rgba(56,189,248,0.2);
+.page{
+    max-width:980px;
+    margin:0 auto;
+    background:#fff;
+    box-shadow:0 24px 70px rgba(11,18,32,.10);
+    display:grid;
+    grid-template-columns:var(--sidebar-w) 1fr;
+    min-height:100vh;
+    position:relative;
 }
 
-/* ── MAIN ── */
-.main { padding: 2.6rem 2.8rem; }
-
-.header {
-    margin-bottom: 2rem;
-    padding-bottom: 1.6rem;
-    border-bottom: 2px solid #f1f5f9;
-}
-.name { font-size: 30px; font-weight: 700; margin: 0 0 4px; color: #0f172a; letter-spacing: -0.4px; }
-.tagline { font-size: 13.5px; color: #0284c7; font-weight: 600; margin: 0 0 14px; }
-
-.print-btn {
-    padding: 6px 14px;
-    background: #0284c7;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    font-size: 12px;
-    font-weight: 600;
-    cursor: pointer;
-}
-.print-btn:hover { background: #0369a1; }
-
-/* ── SECTIONS ── */
-.section { margin-bottom: 2rem; }
-
-.section-title {
-    font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
-    color: #0f172a; margin: 0 0 1rem;
-    padding-bottom: 7px;
-    border-bottom: 2px solid #e2e8f0;
-    position: relative;
-}
-.section-title::before {
-    content: '';
-    position: absolute; left: 0; bottom: -2px;
-    width: 34px; height: 2px;
-    background: #0284c7;
+/* ══════════ SIDEBAR ══════════ */
+.sidebar{
+    background:linear-gradient(180deg,var(--navy) 0%,var(--navy-2) 100%);
+    color:#e2e8f0;
+    padding:2.2rem 1.5rem 2.4rem;
+    position:relative;
 }
 
-/* ── JOBS ── */
-.job { margin-bottom: 1.5rem; }
-.job-header { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; margin-bottom: 5px; }
-.job-title { font-size: 14px; font-weight: 700; color: #0f172a; }
-.job-company { color: #0284c7; font-weight: 500; font-size: 13px; }
-.job-date { font-size: 11.5px; color: #94a3b8; font-weight: 600; flex-shrink: 0; white-space: nowrap; }
-.job-desc { font-size: 13px; color: #475569; margin: 5px 0 0; }
-.job-desc ul { margin: 4px 0 0; padding-left: 16px; }
-.job-desc li { margin-bottom: 3px; }
-
-/* ── BADGE GROUPS ── */
-.cert-group { margin-bottom: 1.5rem; }
-.cert-group-title { font-size: 12px; font-weight: 700; color: #0f172a; margin: 0 0 3px; }
-.cert-group-desc { font-size: 11px; color: #64748b; margin: 0 0 8px; }
-
-.badge-gallery { display: flex; flex-wrap: wrap; gap: 8px; }
-
-.badge-card {
-    display: flex; flex-direction: column; align-items: center;
-    width: 88px; padding: 8px 6px;
-    border: 1px solid #e8edf3;
-    border-radius: 8px;
-    background: #f9fafc;
-    text-decoration: none;
-    transition: all 0.15s ease;
-    cursor: pointer;
+.photo-wrap{
+    width:112px;
+    height:112px;
+    margin:0 auto 1rem;
+    border-radius:50%;
+    overflow:hidden;
+    background:rgba(56,189,248,.12);
+    border:2px solid rgba(56,189,248,.45);
+    box-shadow:0 0 0 5px rgba(56,189,248,.07);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
 }
-.badge-card:hover {
-    border-color: #38bdf8;
-    background: #fff;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.07);
-    transform: translateY(-2px);
-}
-.badge-card img {
-    width: 42px; height: 42px;
-    object-fit: contain;
-    margin-bottom: 6px;
-}
-.badge-card .badge-title {
-    font-size: 8.5px; font-weight: 600;
-    color: #334155;
-    text-align: center; line-height: 1.25;
-}
-.badge-card .badge-issuer {
-    font-size: 7.5px; color: #94a3b8;
-    text-align: center; margin-top: 3px;
+.photo-wrap img{width:100%;height:100%;object-fit:cover;display:block;}
+.photo-initials{
+    font-size:30px;
+    font-weight:600;
+    color:#7dd3fc;
+    letter-spacing:1px;
 }
 
-/* ── LENOVO TABLE ── */
-.lenovo-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3px 20px;
+.sidebar-name{
+    font-size:17px;
+    font-weight:600;
+    margin:0;
+    color:#fff;
+    letter-spacing:-.2px;
+    text-align:center;
 }
-.lenovo-item {
-    display: flex; align-items: center;
-    gap: 7px; font-size: 11.5px; color: #334155;
-    padding: 4px 0;
-    border-bottom: 1px solid #f8fafc;
-}
-.lenovo-item img { width: 16px; height: 16px; object-fit: contain; flex-shrink: 0; }
-.lenovo-valid { color: #94a3b8; font-size: 10px; margin-left: auto; white-space: nowrap; }
-
-/* ── POWERSHELL LIST ── */
-.ps-list { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
-.ps-tag {
-    display: inline-block;
-    padding: 4px 10px;
-    background: #f0f4ff;
-    color: #3b4fbd;
-    border: 0.5px solid #c7d2fe;
-    border-radius: 4px;
-    font-size: 11px;
-    font-weight: 500;
-    text-decoration: none;
-}
-.ps-tag:hover { background: #e0e7ff; border-color: #818cf8; }
-
-.footer {
-    font-size: 10.5px; color: #94a3b8;
-    text-align: center;
-    margin-top: 1.5rem; padding-top: 1.2rem;
-    border-top: 1px solid #e2e8f0;
+.sidebar-role{
+    font-size:9.5px;
+    color:#8fa3bd;
+    margin:5px 0 0;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:1.1px;
+    text-align:center;
 }
 
-@media print {
-    body { background: #fff; }
-    .page { box-shadow: none; grid-template-columns: 210px 1fr; }
-    .print-btn { display: none; }
-    .badge-card:hover { transform: none; box-shadow: none; }
+.sidebar h2{
+    font-size:9.5px;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:1.2px;
+    margin:1.65rem 0 .65rem;
+    padding-top:1.1rem;
+    border-top:1px solid rgba(255,255,255,.08);
+    color:#38bdf8;
 }
-@media (max-width: 860px) {
-    .page { grid-template-columns: 1fr; }
-    .main { padding: 2rem 1.5rem; }
+.sidebar h2:first-of-type{border:none;margin-top:1.5rem;padding-top:0;}
+
+.sidebar ul{list-style:none;padding:0;margin:0;}
+.sidebar li{
+    font-size:12px;
+    line-height:1.65;
+    color:#c3cfdd;
+    margin-bottom:5px;
+    display:flex;
+    gap:8px;
+    align-items:flex-start;
 }
-@media (max-width: 580px) {
-    .name { font-size: 24px; }
-    .job-header { flex-direction: column; gap: 3px; }
-    .lenovo-grid { grid-template-columns: 1fr; }
+.sidebar li .ic{
+    color:#38bdf8;
+    flex-shrink:0;
+    width:13px;
+    text-align:center;
+    font-size:11px;
+    line-height:1.65;
 }
+.sidebar a{color:#7dd3fc;text-decoration:none;font-weight:500;word-break:break-all;}
+.sidebar a:hover{color:#bae6fd;}
+
+.tags{display:flex;flex-wrap:wrap;gap:4px;}
+.tag{
+    display:inline-block;
+    background:rgba(56,189,248,.09);
+    color:#93cdf0;
+    padding:3px 7px;
+    border-radius:4px;
+    font-size:10.5px;
+    font-weight:500;
+    border:.5px solid rgba(56,189,248,.18);
+    line-height:1.45;
+}
+.tag.core{
+    background:rgba(56,189,248,.17);
+    color:#bae6fd;
+    border-color:rgba(56,189,248,.38);
+}
+
+/* ══════════ MAIN ══════════ */
+.main{padding:2.5rem 2.9rem 2.2rem;}
+
+.header{
+    margin-bottom:1.9rem;
+    padding-bottom:1.5rem;
+    border-bottom:1px solid var(--line);
+}
+.name{
+    font-size:31px;
+    font-weight:700;
+    margin:0 0 5px;
+    color:var(--ink);
+    letter-spacing:-.7px;
+    line-height:1.15;
+}
+.tagline{
+    font-size:13px;
+    color:var(--accent-deep);
+    font-weight:600;
+    margin:0;
+    letter-spacing:.1px;
+}
+.summary{
+    font-size:12.5px;
+    color:var(--body);
+    margin:.85rem 0 0;
+    line-height:1.7;
+    max-width:60ch;
+}
+
+.actions{margin-top:1rem;display:flex;gap:8px;flex-wrap:wrap;}
+.btn{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    padding:7px 15px;
+    background:var(--ink);
+    color:#fff;
+    border:none;
+    border-radius:6px;
+    font-size:11.5px;
+    font-weight:600;
+    font-family:inherit;
+    cursor:pointer;
+    text-decoration:none;
+    transition:background .15s ease,transform .1s ease;
+}
+.btn:hover{background:#1e293b;}
+.btn:active{transform:translateY(1px);}
+.btn.ghost{background:#fff;color:var(--ink-2);border:1px solid var(--line);}
+.btn.ghost:hover{background:#f8fafc;border-color:#cbd5e1;}
+
+/* ── sections ── */
+.section{margin-bottom:1.9rem;}
+
+.section-title{
+    font-size:10.5px;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:1.4px;
+    color:var(--ink);
+    margin:0 0 1.05rem;
+    padding-bottom:7px;
+    border-bottom:1px solid var(--line);
+    position:relative;
+}
+.section-title::before{
+    content:'';
+    position:absolute;left:0;bottom:-1px;
+    width:32px;height:2px;
+    background:var(--accent);
+    border-radius:1px;
+}
+
+/* ── experience ── */
+.job{
+    position:relative;
+    padding-left:19px;
+    margin-bottom:1.5rem;
+}
+.job::before{
+    content:'';
+    position:absolute;left:0;top:6px;
+    width:7px;height:7px;
+    border-radius:50%;
+    background:var(--accent);
+    box-shadow:0 0 0 3px rgba(14,165,233,.14);
+}
+.job::after{
+    content:'';
+    position:absolute;left:3px;top:18px;bottom:-10px;
+    width:1px;
+    background:var(--line);
+}
+.job:last-child::after{display:none;}
+
+.job-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:1rem;
+    margin-bottom:3px;
+}
+.job-title{font-size:14px;font-weight:600;color:var(--ink);line-height:1.4;}
+.job-company{color:var(--accent-deep);font-weight:500;font-size:12.5px;}
+.job-date{
+    font-family:'JetBrains Mono',ui-monospace,monospace;
+    font-size:10px;
+    color:var(--muted);
+    font-weight:500;
+    flex-shrink:0;
+    white-space:nowrap;
+    letter-spacing:-.2px;
+}
+
+.job-block{margin-top:9px;}
+.job-block + .job-block{margin-top:8px;}
+.jb-label{
+    font-size:11px;
+    font-weight:600;
+    color:var(--ink);
+    margin-bottom:2px;
+}
+.jb-text{
+    font-size:12px;
+    color:var(--body);
+    line-height:1.65;
+}
+.job-plain{font-size:12px;color:var(--body);line-height:1.65;margin-top:8px;}
+
+/* ── certifications ── */
+.cert-group{margin-bottom:1.35rem;page-break-inside:avoid;break-inside:avoid;}
+.cg-head{display:flex;align-items:baseline;gap:8px;margin-bottom:2px;}
+.cert-group-title{font-size:11.5px;font-weight:600;color:var(--ink);margin:0;}
+.cg-count{
+    font-family:'JetBrains Mono',monospace;
+    font-size:9px;
+    color:var(--muted);
+    background:var(--line-soft);
+    padding:1px 6px;
+    border-radius:20px;
+}
+.cert-group-desc{font-size:10.5px;color:var(--muted);margin:0 0 9px;line-height:1.5;}
+
+.badge-gallery{display:flex;flex-wrap:wrap;gap:7px;}
+
+.badge-card{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    width:86px;
+    padding:9px 6px 8px;
+    border:1px solid var(--line);
+    border-radius:9px;
+    background:#fff;
+    text-decoration:none;
+    transition:border-color .15s ease,box-shadow .15s ease,transform .15s ease;
+}
+.badge-card:hover{
+    border-color:var(--accent);
+    box-shadow:0 6px 16px rgba(14,165,233,.13);
+    transform:translateY(-2px);
+}
+.badge-card img{width:44px;height:44px;object-fit:contain;margin-bottom:7px;}
+.badge-title{
+    font-size:8.5px;
+    font-weight:600;
+    color:var(--ink-2);
+    text-align:center;
+    line-height:1.28;
+}
+.badge-issuer{
+    font-size:7.5px;
+    color:var(--muted);
+    text-align:center;
+    margin-top:3px;
+}
+
+/* ── link pills ── */
+.pill-list{display:flex;flex-wrap:wrap;gap:6px;}
+.pill{
+    display:inline-flex;
+    align-items:center;
+    gap:5px;
+    padding:5px 11px;
+    background:#f7f9fc;
+    color:#334155;
+    border:1px solid var(--line);
+    border-radius:20px;
+    font-size:10.5px;
+    font-weight:500;
+    text-decoration:none;
+    transition:all .15s ease;
+}
+.pill::before{
+    content:'';
+    width:5px;height:5px;
+    border-radius:50%;
+    background:var(--accent);
+    flex-shrink:0;
+}
+.pill:hover{background:#fff;border-color:var(--accent);color:var(--ink);}
+
+/* ── lenovo grid ── */
+.lenovo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 22px;}
+.lenovo-item{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    font-size:10.5px;
+    color:#3d4a5c;
+    padding:4px 0;
+    border-bottom:1px solid var(--line-soft);
+}
+.lenovo-item img{width:15px;height:15px;object-fit:contain;flex-shrink:0;}
+.lenovo-valid{
+    font-family:'JetBrains Mono',monospace;
+    color:var(--muted);
+    font-size:8.5px;
+    margin-left:auto;
+    white-space:nowrap;
+}
+
+.footer{
+    font-size:9.5px;
+    color:var(--muted);
+    text-align:center;
+    margin-top:1.4rem;
+    padding-top:1.1rem;
+    border-top:1px solid var(--line);
+    line-height:1.5;
+}
+
+/* ══════════ RESPONSIVE ══════════ */
+@media (max-width:880px){
+    .page{grid-template-columns:1fr;box-shadow:none;}
+    .main{padding:2rem 1.4rem;}
+    .name{font-size:25px;}
+    .lenovo-grid{grid-template-columns:1fr;}
+}
+@media (max-width:560px){
+    .name{font-size:22px;}
+    .job-header{flex-direction:column;gap:2px;}
+    .badge-card{width:calc(33.333% - 5px);}
+}
+
+/* ══════════ PRINT / PDF ══════════ */
+@page{
+    size:A4;
+    margin:0;
+}
+
+@media print{
+    :root{--sidebar-w:60mm;}
+
+    html,body{
+        background:#fff !important;
+        width:210mm;
+    }
+
+    *{
+        -webkit-print-color-adjust:exact !important;
+        print-color-adjust:exact !important;
+    }
+
+    .page{
+        max-width:none;
+        width:210mm;
+        min-height:auto;
+        margin:0;
+        box-shadow:none;
+        display:block;
+    }
+
+    /* dark stripe repeats on every printed page */
+    .print-stripe{
+        display:block;
+        position:fixed;
+        top:0;left:0;
+        width:60mm;
+        height:100vh;
+        background:var(--navy);
+        z-index:0;
+    }
+
+    .sidebar{
+        position:relative;
+        z-index:1;
+        background:transparent !important;
+        width:60mm;
+        float:left;
+        padding:12mm 7mm 8mm;
+    }
+
+    .main{
+        margin-left:60mm;
+        padding:12mm 10mm 8mm;
+    }
+
+    .actions{display:none !important;}
+
+    .photo-wrap{
+        box-shadow:none !important;
+        border-color:rgba(255,255,255,.28) !important;
+    }
+
+    .badge-card{
+        border-color:#dbe3ec;
+        box-shadow:none !important;
+        transform:none !important;
+    }
+
+    .section{page-break-inside:auto;}
+    .section-title{page-break-after:avoid;break-after:avoid;}
+    .job{page-break-inside:avoid;break-inside:avoid;}
+    .cert-group{page-break-inside:avoid;break-inside:avoid;}
+    .badge-gallery{page-break-inside:avoid;break-inside:avoid;}
+    .lenovo-item{break-inside:avoid;}
+    .footer{page-break-inside:avoid;}
+
+    a{text-decoration:none;color:inherit;}
+    .sidebar a{color:#7dd3fc !important;}
+}
+
+.print-stripe{display:none;}
 </style>
 </head>
 <body>
 
 <div class="page">
+    <div class="print-stripe" aria-hidden="true"></div>
 
-    <!-- ══ SIDEBAR ══ -->
-    <div class="sidebar">
-        <h1 class="sidebar-name">Filippo Spada</h1>
+    <!-- ══════════ SIDEBAR ══════════ -->
+    <aside class="sidebar">
+
+        <div class="photo-wrap">
+            <img src="./foto.jpg" alt="Filippo Antonino Spada"
+                 onerror="this.style.display='none';this.parentNode.insertAdjacentHTML('beforeend','<span class=\'photo-initials\'>FS</span>');">
+        </div>
+
+        <h1 class="sidebar-name">Filippo A. Spada</h1>
         <p class="sidebar-role">Sistemista &amp; Developer</p>
 
         <h2>Contatti</h2>
         <ul>
-            <li>📍 Pace del Mela (ME) · Catania</li>
-            <li>📞 +39 392 0626718</li>
-            <li>✉️ filispada@gmail.com</li>
-            <li><a href="https://github.com/fispas" target="_blank">github.com/fispas</a></li>
-            <li>🚗 Patente B</li>
+            <li><span class="ic">&#9679;</span><span>Pace del Mela (ME)<br>Catania</span></li>
+            <li><span class="ic">&#9679;</span><span>+39 392 0626718</span></li>
+            <li><span class="ic">&#9679;</span><span>filispada@gmail.com</span></li>
+            <li><span class="ic">&#9679;</span><a href="https://github.com/fispas" target="_blank" rel="noopener">github.com/fispas</a></li>
+            <li><span class="ic">&#9679;</span><span>Patente B — automunito</span></li>
         </ul>
 
-        <h2>Infrastructure</h2>
+        <h2>Virtualizzazione</h2>
         <div class="tags">
-            <span class="tag">Windows Server</span>
-            <span class="tag">Active Directory</span>
-            <span class="tag">Linux</span>
-            <span class="tag">VMware vSphere</span>
-            <span class="tag">Hyper-V / SCVMM</span>
-            <span class="tag">Fortinet</span>
-            <span class="tag">Veeam</span>
-            <span class="tag">SAN / NAS</span>
-            <span class="tag">DNS · DHCP</span>
-            <span class="tag">TCP/IP · NFS · SMB</span>
+            <span class="tag core">VMware vSphere</span>
+            <span class="tag core">vCenter</span>
+            <span class="tag core">Hyper-V</span>
+            <span class="tag core">Proxmox VE</span>
+            <span class="tag">SCVMM</span>
+            <span class="tag">Failover Cluster</span>
         </div>
 
-        <h2>Cloud &amp; Servizi</h2>
+        <h2>Sistemi operativi</h2>
+        <div class="tags">
+            <span class="tag core">Windows Server</span>
+            <span class="tag core">Active Directory</span>
+            <span class="tag">Group Policy</span>
+            <span class="tag">DNS · DHCP</span>
+            <span class="tag">RDS / Terminal Server</span>
+            <span class="tag core">Linux</span>
+            <span class="tag">Bash · CLI</span>
+        </div>
+
+        <h2>Storage &amp; backup</h2>
+        <div class="tags">
+            <span class="tag core">Veeam B&amp;R</span>
+            <span class="tag core">QNAP</span>
+            <span class="tag core">Synology</span>
+            <span class="tag">Lenovo Storage</span>
+            <span class="tag">IBM Storage</span>
+            <span class="tag">SAN · NAS</span>
+            <span class="tag">Disaster Recovery</span>
+        </div>
+
+        <h2>Hardware server</h2>
+        <div class="tags">
+            <span class="tag">Lenovo ThinkSystem</span>
+            <span class="tag">IBM System x</span>
+            <span class="tag">XClarity</span>
+            <span class="tag">RAID · IPMI</span>
+        </div>
+
+        <h2>Rete &amp; sicurezza</h2>
+        <div class="tags">
+            <span class="tag">Fortinet FortiGate</span>
+            <span class="tag">VPN site-to-site</span>
+            <span class="tag">VLAN · TCP/IP</span>
+            <span class="tag">NFS · CIFS/SMB</span>
+            <span class="tag">AD Hardening</span>
+        </div>
+
+        <h2>Cloud</h2>
         <div class="tags">
             <span class="tag">Microsoft 365</span>
             <span class="tag">Exchange Online</span>
             <span class="tag">SharePoint Online</span>
             <span class="tag">Azure IaaS</span>
-            <span class="tag">RDS / Terminal Server</span>
         </div>
 
-        <h2>Automation &amp; Dev</h2>
+        <h2>Automazione &amp; dev</h2>
         <div class="tags">
-            <span class="tag">PowerShell</span>
-            <span class="tag">Python</span>
+            <span class="tag core">PowerShell</span>
+            <span class="tag core">Python</span>
             <span class="tag">ReactJS</span>
             <span class="tag">React Native</span>
             <span class="tag">NodeJS</span>
-            <span class="tag">JavaScript ES6+</span>
             <span class="tag">Git</span>
         </div>
 
         <h2>Istruzione</h2>
         <ul>
-            <li>Perito Elettronica<br>e Telecomunicazioni</li>
-            <li style="margin-top:3px; color:#94a3b8;">ITIS "E. Majorana"<br>Milazzo — 2011</li>
+            <li><span class="ic">&#9679;</span><span>Perito in Elettronica<br>e Telecomunicazioni<br><span style="color:#8fa3bd;">ITIS "E. Majorana", Milazzo — 2011</span></span></li>
         </ul>
-    </div>
 
-    <!-- ══ MAIN ══ -->
-    <div class="main">
+        <h2>Lingue</h2>
+        <ul>
+            <li><span class="ic">&#9679;</span><span>Italiano — madrelingua</span></li>
+            <li><span class="ic">&#9679;</span><span>Inglese — tecnico</span></li>
+        </ul>
 
-        <div class="header">
+    </aside>
+
+    <!-- ══════════ MAIN ══════════ -->
+    <main class="main">
+
+        <header class="header">
             <h1 class="name">Filippo Antonino Spada</h1>
             <p class="tagline">System &amp; Network Engineer — Enterprise Infrastructure &amp; Security</p>
-            <button class="print-btn" onclick="window.print()">📄 Scarica / Stampa PDF</button>
-        </div>
+            <p class="summary">
+                Sistemista senior con oltre sei anni di esperienza su infrastrutture aziendali eterogenee:
+                virtualizzazione multi-hypervisor, Active Directory, storage e backup, reti e sicurezza perimetrale.
+                Background da sviluppatore full stack che porto nel lavoro quotidiano automatizzando le operazioni
+                ripetitive e costruendo strumenti interni su misura.
+            </p>
+            <div class="actions">
+                <button class="btn" onclick="window.print()">&#8681;&nbsp; Scarica PDF</button>
+                <a class="btn ghost" href="https://github.com/fispas" target="_blank" rel="noopener">GitHub</a>
+                <a class="btn ghost" href="mailto:filispada@gmail.com">Scrivimi</a>
+            </div>
+        </header>
 
         <!-- ESPERIENZA -->
-        <div class="section">
-            <div class="section-title">Esperienza professionale</div>
+        <section class="section">
+            <h2 class="section-title">Esperienza professionale</h2>
 
-            <div class="job">
+            <article class="job">
                 <div class="job-header">
                     <div>
                         <div class="job-title">Sistemista Informatico Senior</div>
                         <div class="job-company">Ricca IT S.r.l. — Catania</div>
                     </div>
-                    <div class="job-date">Nov 2019 – In corso</div>
+                    <div class="job-date">NOV 2019 → OGGI</div>
                 </div>
-                <div class="job-desc">
-                    <ul>
-                        <li>Gestione ambienti Windows Server e Linux, AD hardening, Group Policy, DNS e DHCP</li>
-                        <li>Infrastrutture di virtualizzazione enterprise, provisioning host e VM</li>
-                        <li>Firewall Fortinet, VPN enterprise, reti TCP/IP, NFS, CIFS/SMB, QNAP NAS</li>
-                        <li>Tenant Microsoft 365, Exchange Online, SharePoint Online; farm RDS/Terminal Server</li>
-                        <li>Backup e Disaster Recovery con Veeam; gestione storage SAN/NAS</li>
-                        <li>Sviluppo tool interni di automazione (Python, PowerShell) e classificazione documenti tramite AI (Anthropic API)</li>
-                    </ul>
-                </div>
-            </div>
 
-            <div class="job">
+                <div class="job-block">
+                    <div class="jb-label">Virtualizzazione multi-hypervisor</div>
+                    <div class="jb-text">
+                        Progettazione, installazione e upgrade di infrastrutture <strong>VMware vSphere</strong> (dalla 5.x alla 8.x) con
+                        gestione centralizzata vCenter: provisioning host ESXi, cluster HA/DRS, vMotion, datastore e snapshot policy.
+                        Gestione di ambienti <strong>Microsoft Hyper-V</strong> con Failover Cluster e SCVMM, e di cluster
+                        <strong>Proxmox VE</strong> su storage condiviso per ambienti a costo contenuto. Migrazioni P2V e V2V
+                        tra hypervisor differenti e consolidamento di server fisici legacy.
+                    </div>
+                </div>
+
+                <div class="job-block">
+                    <div class="jb-label">Windows Server, Active Directory e RDS</div>
+                    <div class="jb-text">
+                        Amministrazione avanzata di domini <strong>Active Directory</strong>: struttura OU, Group Policy, DNS, DHCP,
+                        ruoli FSMO, replica tra domain controller e interventi di hardening sulla sicurezza del dominio.
+                        Progettazione e deploy di farm <strong>Terminal Server / RDS</strong> — session host, broker di connessione,
+                        gateway, profili utente e licensing — per accesso remoto multi-utente agli applicativi gestionali.
+                    </div>
+                </div>
+
+                <div class="job-block">
+                    <div class="jb-label">Sistemi Linux</div>
+                    <div class="jb-text">
+                        Installazione e manutenzione di server <strong>Linux</strong> per servizi applicativi e di rete:
+                        gestione utenti e permessi, servizi systemd, condivisioni NFS e Samba, automazione via shell scripting
+                        e attività pianificate.
+                    </div>
+                </div>
+
+                <div class="job-block">
+                    <div class="jb-label">Storage, NAS e data protection</div>
+                    <div class="jb-text">
+                        Configurazione e gestione di NAS di diversi vendor — <strong>QNAP</strong> e <strong>Synology</strong> —
+                        con volumi RAID, condivisioni SMB/NFS, permessi integrati con Active Directory, snapshot e replica tra sedi.
+                        Gestione di storage enterprise <strong>Lenovo</strong> e <strong>IBM</strong> con relativo provisioning LUN e monitoraggio.
+                        Definizione ed esecuzione di strategie di backup e disaster recovery con <strong>Veeam Backup &amp; Replication</strong>:
+                        job su VM e file server, repository con retention a più livelli, copie offsite e test di ripristino periodici.
+                    </div>
+                </div>
+
+                <div class="job-block">
+                    <div class="jb-label">Hardware server</div>
+                    <div class="jb-text">
+                        Installazione, configurazione e manutenzione di server <strong>Lenovo ThinkSystem</strong> e
+                        <strong>IBM System x</strong>: configurazione RAID, aggiornamenti firmware, gestione remota via
+                        XClarity/IMM, sostituzione componenti e gestione delle chiamate di assistenza in garanzia.
+                    </div>
+                </div>
+
+                <div class="job-block">
+                    <div class="jb-label">Rete e sicurezza perimetrale</div>
+                    <div class="jb-text">
+                        Configurazione di switch, router e apparati di rete aziendali; segmentazione VLAN e indirizzamento TCP/IP.
+                        Gestione di base di firewall <strong>Fortinet FortiGate</strong>: regole di policy, NAT, pubblicazione servizi
+                        e configurazione di VPN site-to-site e client per l'accesso remoto sicuro.
+                    </div>
+                </div>
+
+                <div class="job-block">
+                    <div class="jb-label">Cloud e collaboration</div>
+                    <div class="jb-text">
+                        Configurazione e gestione di tenant <strong>Microsoft 365</strong>: Exchange Online, SharePoint Online,
+                        gestione identità e licenze, scenari di identità ibrida con Active Directory on-premise.
+                    </div>
+                </div>
+
+                <div class="job-block">
+                    <div class="jb-label">Automazione e sviluppo interno</div>
+                    <div class="jb-text">
+                        Sviluppo di script <strong>PowerShell</strong> e <strong>Python</strong> per l'automazione di attività sistemistiche
+                        ricorrenti — provisioning utenze, controlli sullo stato dei backup, migrazione massiva di file tra NAS e file server —
+                        e realizzazione di strumenti interni su misura, tra cui un applicativo di classificazione automatica di documenti
+                        digitalizzati basato su API di intelligenza artificiale.
+                    </div>
+                </div>
+            </article>
+
+            <article class="job">
                 <div class="job-header">
                     <div>
                         <div class="job-title">Sviluppatore Full Stack Freelance</div>
                         <div class="job-company">Pace del Mela (ME)</div>
                     </div>
-                    <div class="job-date">Gen 2012 – Set 2018</div>
+                    <div class="job-date">GEN 2012 → SET 2018</div>
                 </div>
-                <div class="job-desc">
-                    Sviluppo web e mobile con ReactJS, React Native, Redux, NodeJS, MongoDB, API REST. Controllo versione con Git.
+                <div class="job-plain">
+                    Sviluppo di applicazioni web e mobile cross-platform con <strong>ReactJS</strong>, <strong>React Native</strong>,
+                    Redux, JavaScript ES6+, HTML5 e CSS3. Progettazione di backend e database con <strong>NodeJS</strong> e MongoDB,
+                    integrazione di API REST, gestione del versionamento e della collaborazione tramite <strong>Git</strong>.
                 </div>
-            </div>
-        </div>
+            </article>
+        </section>
 
         <!-- CERTIFICAZIONI -->
-        <div class="section">
-            <div class="section-title">Certificazioni &amp; badge verificati</div>
+        <section class="section">
+            <h2 class="section-title">Certificazioni &amp; badge verificati</h2>
 
-            <!-- AD Security -->
             <div class="cert-group">
-                <div class="cert-group-title">Active Directory Security — HeroAdmin</div>
-                <div class="cert-group-desc">Hardening e messa in sicurezza di infrastrutture Active Directory enterprise</div>
+                <div class="cg-head">
+                    <h3 class="cert-group-title">Active Directory Security</h3>
+                    <span class="cg-count">3</span>
+                </div>
+                <p class="cert-group-desc">Hardening e messa in sicurezza di infrastrutture Active Directory enterprise — HeroAdmin</p>
                 <div class="badge-gallery">
-                    <a href="https://app.open-badge.eu/public/badges/3f56cc52-e53a-410e-87f7-28b7ee2e2e92" target="_blank" class="badge-card">
+                    <a href="https://app.open-badge.eu/public/badges/3f56cc52-e53a-410e-87f7-28b7ee2e2e92" target="_blank" rel="noopener" class="badge-card">
                         <img src="./badge/Hardening%20Active%20Directory.png" alt="Hardening Active Directory">
                         <span class="badge-title">Hardening Active Directory</span>
                         <span class="badge-issuer">HeroAdmin</span>
                     </a>
-                    <a href="https://app.open-badge.eu/public/badges/4ee130e1-f05e-43ad-bb51-a7d93557c8c3" target="_blank" class="badge-card">
+                    <a href="https://app.open-badge.eu/public/badges/4ee130e1-f05e-43ad-bb51-a7d93557c8c3" target="_blank" rel="noopener" class="badge-card">
                         <img src="./badge/Hardening%20Active%20Directory%20Integration%20%5BHAAD-2402%5D.png" alt="AD Hardening Integration">
                         <span class="badge-title">AD Hardening Integration</span>
                         <span class="badge-issuer">HeroAdmin</span>
                     </a>
-                    <a href="https://app.open-badge.eu/public/badges/cf5a99bd-cb82-40ba-b7ce-0bb99b3dc74d" target="_blank" class="badge-card">
+                    <a href="https://app.open-badge.eu/public/badges/cf5a99bd-cb82-40ba-b7ce-0bb99b3dc74d" target="_blank" rel="noopener" class="badge-card">
                         <img src="./badge/Hardening%20Active%20Directory%20For%20Hero.png" alt="AD Hardening for Hero">
                         <span class="badge-title">AD Hardening for Hero</span>
                         <span class="badge-issuer">HeroAdmin</span>
@@ -333,62 +735,64 @@ body {
                 </div>
             </div>
 
-            <!-- Microsoft Learn -->
             <div class="cert-group">
-                <div class="cert-group-title">Microsoft Learn — Identity &amp; Directory Services</div>
-                <div class="cert-group-desc">Percorsi su Active Directory, identità ibrida, Azure AD e Group Policy</div>
+                <div class="cg-head">
+                    <h3 class="cert-group-title">Microsoft Learn — Identity &amp; Directory Services</h3>
+                    <span class="cg-count">11</span>
+                </div>
+                <p class="cert-group-desc">Percorsi e moduli su Active Directory, identità ibrida, Azure IaaS, Group Policy e certificate services</p>
                 <div class="badge-gallery">
-                    <a href="https://learn.microsoft.com/it-it/training/paths/deploy-manage-identity-infrastructure/" target="_blank" class="badge-card">
+                    <a href="https://learn.microsoft.com/it-it/training/paths/deploy-manage-identity-infrastructure/" target="_blank" rel="noopener" class="badge-card">
                         <img src="./badge/deploy-and-manage-identity-infrastructure.png" alt="Identity Infrastructure">
                         <span class="badge-title">Identity Infrastructure</span>
                         <span class="badge-issuer">Microsoft Learn</span>
                     </a>
-                    <a href="https://learn.microsoft.com/it-it/training/paths/implement-windows-server-iaas-virtual-machine-identity/" target="_blank" class="badge-card">
-                        <img src="./badge/implement-windows-server-iaas-vm-identity.png" alt="Win Server IaaS Identity">
+                    <a href="https://learn.microsoft.com/it-it/training/paths/implement-windows-server-iaas-virtual-machine-identity/" target="_blank" rel="noopener" class="badge-card">
+                        <img src="./badge/implement-windows-server-iaas-vm-identity.png" alt="Windows Server IaaS Identity">
                         <span class="badge-title">Win Server IaaS Identity</span>
                         <span class="badge-issuer">Microsoft Learn</span>
                     </a>
-                    <a href="https://learn.microsoft.com/it-it/training/paths/active-directory-domain-services/" target="_blank" class="badge-card">
+                    <a href="https://learn.microsoft.com/it-it/training/paths/active-directory-domain-services/" target="_blank" rel="noopener" class="badge-card">
                         <img src="./badge/active-directory-domain-services.png" alt="AD Domain Services">
                         <span class="badge-title">AD Domain Services</span>
                         <span class="badge-issuer">Microsoft Learn</span>
                     </a>
-                    <a href="https://learn.microsoft.com/it-it/training/modules/deploy-manage-azure-iaas-active-directory-domain-controllers-azure/" target="_blank" class="badge-card">
+                    <a href="https://learn.microsoft.com/it-it/training/modules/deploy-manage-azure-iaas-active-directory-domain-controllers-azure/" target="_blank" rel="noopener" class="badge-card">
                         <img src="./badge/deploy-and-manage-azure-iaas-active-directory-domain-controllers-in-azure.png" alt="Azure IaaS AD DCs">
                         <span class="badge-title">Azure IaaS AD DCs</span>
                         <span class="badge-issuer">Microsoft Learn</span>
                     </a>
-                    <a href="https://learn.microsoft.com/it-it/training/modules/implement-hybrid-identity-windows-server/" target="_blank" class="badge-card">
+                    <a href="https://learn.microsoft.com/it-it/training/modules/implement-hybrid-identity-windows-server/" target="_blank" rel="noopener" class="badge-card">
                         <img src="./badge/implement-hybrid-identity-with-windows-server.png" alt="Hybrid Identity">
                         <span class="badge-title">Hybrid Identity</span>
                         <span class="badge-issuer">Microsoft Learn</span>
                     </a>
-                    <a href="https://learn.microsoft.com/it-it/training/modules/implement-manage-active-directory-certificate-services/" target="_blank" class="badge-card">
+                    <a href="https://learn.microsoft.com/it-it/training/modules/implement-manage-active-directory-certificate-services/" target="_blank" rel="noopener" class="badge-card">
                         <img src="./badge/implement-and-manage-active-directory-certificate-services.png" alt="AD Certificate Services">
                         <span class="badge-title">Manage AD CS</span>
                         <span class="badge-issuer">Microsoft Learn</span>
                     </a>
-                    <a href="https://learn.microsoft.com/it-it/training/modules/manage-advanced-features-of-ad-ds/" target="_blank" class="badge-card">
+                    <a href="https://learn.microsoft.com/it-it/training/modules/manage-advanced-features-of-ad-ds/" target="_blank" rel="noopener" class="badge-card">
                         <img src="./badge/manage-advanced-features-of-ad-ds.png" alt="Advanced AD DS">
                         <span class="badge-title">Advanced AD DS</span>
                         <span class="badge-issuer">Microsoft Learn</span>
                     </a>
-                    <a href="https://learn.microsoft.com/it-it/training/modules/implement-group-policy-objects/" target="_blank" class="badge-card">
+                    <a href="https://learn.microsoft.com/it-it/training/modules/implement-group-policy-objects/" target="_blank" rel="noopener" class="badge-card">
                         <img src="./badge/implement-group-policy-objects.png" alt="Implement GPOs">
                         <span class="badge-title">Implement GPOs</span>
                         <span class="badge-issuer">Microsoft Learn</span>
                     </a>
-                    <a href="https://learn.microsoft.com/it-it/training/modules/manage-active-directory-domain-services-flexible-single-master-operation-roles/" target="_blank" class="badge-card">
+                    <a href="https://learn.microsoft.com/it-it/training/modules/manage-active-directory-domain-services-flexible-single-master-operation-roles/" target="_blank" rel="noopener" class="badge-card">
                         <img src="./badge/manage-ad-ds-domain-controllers-and-fsmo-roles.png" alt="AD DS FSMO Roles">
                         <span class="badge-title">AD DS FSMO Roles</span>
                         <span class="badge-issuer">Microsoft Learn</span>
                     </a>
-                    <a href="https://learn.microsoft.com/it-it/training/modules/introduction-to-ad-ds/" target="_blank" class="badge-card">
+                    <a href="https://learn.microsoft.com/it-it/training/modules/introduction-to-ad-ds/" target="_blank" rel="noopener" class="badge-card">
                         <img src="./badge/introduction-to-ad-ds.png" alt="Intro to AD DS">
                         <span class="badge-title">Intro to AD DS</span>
                         <span class="badge-issuer">Microsoft Learn</span>
                     </a>
-                    <a href="https://learn.microsoft.com/it-it/training/paths/describe-business-value-microsoft-power-platform/" target="_blank" class="badge-card">
+                    <a href="https://learn.microsoft.com/it-it/training/paths/describe-business-value-microsoft-power-platform/" target="_blank" rel="noopener" class="badge-card">
                         <img src="./badge/power-platform-learning-path.png" alt="Power Platform">
                         <span class="badge-title">Power Platform Value</span>
                         <span class="badge-issuer">Microsoft Learn</span>
@@ -396,44 +800,48 @@ body {
                 </div>
             </div>
 
-            <!-- PowerShell -->
             <div class="cert-group">
-                <div class="cert-group-title">Microsoft Learn — PowerShell</div>
-                <div class="cert-group-desc">Automazione e scripting con PowerShell 7</div>
-                <div class="ps-list">
-                    <a href="https://learn.microsoft.com/it-it/powershell/scripting/overview?view=powershell-7.6" target="_blank" class="ps-tag">PowerShell Overview</a>
-                    <a href="https://learn.microsoft.com/it-it/powershell/scripting/learn/ps101/01-getting-started?view=powershell-7.6" target="_blank" class="ps-tag">PS101 — Getting Started</a>
-                    <a href="https://learn.microsoft.com/it-it/powershell/scripting/learn/ps101/02-help-system?view=powershell-7.6" target="_blank" class="ps-tag">PS101 — Help System</a>
-                    <a href="https://learn.microsoft.com/it-it/powershell/scripting/learn/ps101/04-pipelines?view=powershell-7.6" target="_blank" class="ps-tag">PS101 — Pipelines</a>
+                <div class="cg-head">
+                    <h3 class="cert-group-title">Microsoft Learn — PowerShell</h3>
+                    <span class="cg-count">4</span>
+                </div>
+                <p class="cert-group-desc">Automazione e scripting con PowerShell 7</p>
+                <div class="pill-list">
+                    <a href="https://learn.microsoft.com/it-it/powershell/scripting/overview?view=powershell-7.6" target="_blank" rel="noopener" class="pill">PowerShell Overview</a>
+                    <a href="https://learn.microsoft.com/it-it/powershell/scripting/learn/ps101/01-getting-started?view=powershell-7.6" target="_blank" rel="noopener" class="pill">PS101 — Getting Started</a>
+                    <a href="https://learn.microsoft.com/it-it/powershell/scripting/learn/ps101/02-help-system?view=powershell-7.6" target="_blank" rel="noopener" class="pill">PS101 — Help System</a>
+                    <a href="https://learn.microsoft.com/it-it/powershell/scripting/learn/ps101/04-pipelines?view=powershell-7.6" target="_blank" rel="noopener" class="pill">PS101 — Pipelines</a>
                 </div>
             </div>
 
-            <!-- Linux + DataCore -->
             <div class="cert-group">
-                <div class="cert-group-title">Linux &amp; Storage Platform</div>
-                <div class="cert-group-desc">Fondamenti Linux e certificazioni storage software-defined DataCore/Swarm</div>
+                <div class="cg-head">
+                    <h3 class="cert-group-title">Linux &amp; storage software-defined</h3>
+                    <span class="cg-count">5</span>
+                </div>
+                <p class="cert-group-desc">Fondamenti Linux — Cisco Networking Academy — e certificazioni DataCore / Swarm</p>
                 <div class="badge-gallery">
-                    <a href="https://www.credly.com/badges/106cc14f-e779-4013-bfd5-f7f42179c302" target="_blank" class="badge-card">
+                    <a href="https://www.credly.com/badges/106cc14f-e779-4013-bfd5-f7f42179c302" target="_blank" rel="noopener" class="badge-card">
                         <img src="./badge/Linux%20Unhatched.png" alt="Linux Unhatched">
                         <span class="badge-title">Linux Unhatched</span>
                         <span class="badge-issuer">Cisco Academy</span>
                     </a>
-                    <a href="https://ti-user-certificates.s3.amazonaws.com/c0020adf-9cd3-427f-9351-bee19619d05b/d18b8b61-f259-4b61-b02e-1c265c692ad2-filippo-spada-datacore-certified-sales-professional-dcsp-online-course-april-2021-certificate.pdf" target="_blank" class="badge-card">
+                    <a href="https://ti-user-certificates.s3.amazonaws.com/c0020adf-9cd3-427f-9351-bee19619d05b/d18b8b61-f259-4b61-b02e-1c265c692ad2-filippo-spada-datacore-certified-sales-professional-dcsp-online-course-april-2021-certificate.pdf" target="_blank" rel="noopener" class="badge-card">
                         <img src="./badge/DataCore%20Certified%20Sales%20Professional%20(DCSP).png" alt="DCSP">
                         <span class="badge-title">DCSP Certified</span>
                         <span class="badge-issuer">DataCore</span>
                     </a>
-                    <a href="https://ti-user-certificates.s3.amazonaws.com/c0020adf-9cd3-427f-9351-bee19619d05b/d18b8b61-f259-4b61-b02e-1c265c692ad2-filippo-spada-4302f56d-3b6b-4ea0-b1a3-72862a2206c4-certificate.pdf" target="_blank" class="badge-card">
-                        <img src="./badge/DataCore%20Certified%20Solution%20Architect%20(DCSA)%20for%20Swarm%20Online%20Course.png" alt="DCSA Swarm">
+                    <a href="https://ti-user-certificates.s3.amazonaws.com/c0020adf-9cd3-427f-9351-bee19619d05b/d18b8b61-f259-4b61-b02e-1c265c692ad2-filippo-spada-4302f56d-3b6b-4ea0-b1a3-72862a2206c4-certificate.pdf" target="_blank" rel="noopener" class="badge-card">
+                        <img src="./badge/DataCore%20Certified%20Solution%20Architect%20(DCSA)%20for%20Swarm%20Online%20Course.png" alt="DCSA for Swarm">
                         <span class="badge-title">DCSA for Swarm</span>
                         <span class="badge-issuer">DataCore</span>
                     </a>
-                    <a href="https://ti-user-certificates.s3.amazonaws.com/c0020adf-9cd3-427f-9351-bee19619d05b/d18b8b61-f259-4b61-b02e-1c265c692ad2-filippo-spada-8eea15a6-1b58-466d-bbad-60ecb02dccf7-certificate.pdf" target="_blank" class="badge-card">
-                        <img src="./badge/DCIE%20for%20Swarm%20Assessment%20Exam.png" alt="DCIE Swarm">
+                    <a href="https://ti-user-certificates.s3.amazonaws.com/c0020adf-9cd3-427f-9351-bee19619d05b/d18b8b61-f259-4b61-b02e-1c265c692ad2-filippo-spada-8eea15a6-1b58-466d-bbad-60ecb02dccf7-certificate.pdf" target="_blank" rel="noopener" class="badge-card">
+                        <img src="./badge/DCIE%20for%20Swarm%20Assessment%20Exam.png" alt="DCIE for Swarm">
                         <span class="badge-title">DCIE for Swarm</span>
                         <span class="badge-issuer">DataCore</span>
                     </a>
-                    <a href="https://ti-user-certificates.s3.amazonaws.com/c0020adf-9cd3-427f-9351-bee19619d05b/d18b8b61-f259-4b61-b02e-1c265c692ad2-filippo-spada-7b0722ba-db0c-44db-ac1c-ee10b78e7cba-certificate.pdf" target="_blank" class="badge-card">
+                    <a href="https://ti-user-certificates.s3.amazonaws.com/c0020adf-9cd3-427f-9351-bee19619d05b/d18b8b61-f259-4b61-b02e-1c265c692ad2-filippo-spada-7b0722ba-db0c-44db-ac1c-ee10b78e7cba-certificate.pdf" target="_blank" rel="noopener" class="badge-card">
                         <img src="./badge/Swarm%20Deep%20Dive%20Online%20Course.png" alt="Swarm Deep Dive">
                         <span class="badge-title">Swarm Deep Dive</span>
                         <span class="badge-issuer">DataCore</span>
@@ -441,40 +849,42 @@ body {
                 </div>
             </div>
 
-            <!-- Lenovo -->
             <div class="cert-group">
-                <div class="cert-group-title">Lenovo 360 Partner Ecosystem</div>
-                <div class="cert-group-desc">19 certificazioni sales/tech — data center, storage, cloud, workplace, servizi gestiti (valide fino a 11–12/2027)</div>
+                <div class="cg-head">
+                    <h3 class="cert-group-title">Lenovo 360 Partner Ecosystem</h3>
+                    <span class="cg-count">19</span>
+                </div>
+                <p class="cert-group-desc">Certificazioni sales e technical su data center, storage, cloud, workplace e servizi — valide fino a 11–12/2027</p>
                 <div class="lenovo-grid">
-                    <div class="lenovo-item"><img src="./badge/Lenovo%20Data%20Center%20Sales%20Certification.png" alt="">Data Center Sales<span class="lenovo-valid">12/2027</span></div>
-                    <div class="lenovo-item"><img src="./badge/Lenovo%20Data%20Center%20Technical%20Certification.png" alt="">Data Center Technical<span class="lenovo-valid">12/2027</span></div>
-                    <div class="lenovo-item"><img src="./badge/Lenovo%20Storage%20Sales%20Certification.png" alt="">Storage Sales<span class="lenovo-valid">12/2027</span></div>
-                    <div class="lenovo-item"><img src="./badge/Lenovo%20Cloud%20Sales%20Certification.png" alt="">Cloud Sales<span class="lenovo-valid">11/2027</span></div>
-                    <div class="lenovo-item"><img src="./badge/Lenovo%20Education%20Sales%20Certification.png" alt="">Education Sales<span class="lenovo-valid">11/2027</span></div>
-                    <div class="lenovo-item"><img src="./badge/Lenovo%20Workstation%20Sales%20Certification.png" alt="">Workstation Sales<span class="lenovo-valid">11/2027</span></div>
-                    <div class="lenovo-item"><img src="./badge/Lenovo%20Smart%20Collaboration%20Sales%20Certification.png" alt="">Smart Collaboration<span class="lenovo-valid">11/2027</span></div>
-                    <div class="lenovo-item"><img src="./badge/Lenovo%20Data%20and%20Analytics%20Sales%20Certification.png" alt="">Data &amp; Analytics<span class="lenovo-valid">11/2027</span></div>
-                    <div class="lenovo-item"><img src="./badge/Lenovo%20Digital%20Workplace%20Solutions%20Sales%20Certification.png" alt="">Digital Workplace<span class="lenovo-valid">11/2027</span></div>
-                    <div class="lenovo-item"><img src="./badge/Lenovo%20Infrastructure%20Managed%20Services%20Sales%20Certification.png" alt="">Managed Services<span class="lenovo-valid">11/2027</span></div>
-                    <div class="lenovo-item"><img src="./badge/Lenovo%20Infrastructure%20Professional%20Services%20Sales%20Certification.png" alt="">Professional Services<span class="lenovo-valid">11/2027</span></div>
-                    <div class="lenovo-item"><img src="./badge/Lenovo%20Infrastructure%20Support%20Services%20Sales%20Certification.png" alt="">Support Services<span class="lenovo-valid">11/2027</span></div>
-                    <div class="lenovo-item"><img src="./badge/Lenovo%20Client%20Virtualization%20Sales%20Certification.png" alt="">Client Virtualization<span class="lenovo-valid">11/2027</span></div>
-                    <div class="lenovo-item"><img src="./badge/Lenovo%20TruScale%20Device%20as%20a%20Service%20Sales%20Certification.png" alt="">TruScale DaaS<span class="lenovo-valid">11/2027</span></div>
-                    <div class="lenovo-item"><img src="./badge/Lenovo%20TruScale%20Infrastructure%20as%20a%20Service%20Sales%20Certification.png" alt="">TruScale IaaS<span class="lenovo-valid">11/2027</span></div>
-                    <div class="lenovo-item"><img src="./badge/Lenovo%20Modern%20Workplace%20Sales%20Certification.png" alt="">Modern Workplace<span class="lenovo-valid">11/2027</span></div>
-                    <div class="lenovo-item"><img src="./badge/Lenovo%20Intelligent%20Devices%20Support%20Services%20Sales%20Certification.png" alt="">Intelligent Devices Support<span class="lenovo-valid">11/2027</span></div>
-                    <div class="lenovo-item"><img src="./badge/Lenovo%20Intelligent%20Devices%20Configuration%20Services%20Sales%20Certification.png" alt="">Intelligent Devices Config<span class="lenovo-valid">11/2027</span></div>
-                    <div class="lenovo-item"><img src="./badge/Lenovo%20Sustainability%20Services%20Sales%20Certification.png" alt="">Sustainability Services<span class="lenovo-valid">11/2027</span></div>
+                    <div class="lenovo-item"><img src="./badge/Lenovo%20Data%20Center%20Sales%20Certification.png" alt="">Data Center Sales<span class="lenovo-valid">12/27</span></div>
+                    <div class="lenovo-item"><img src="./badge/Lenovo%20Data%20Center%20Technical%20Certification.png" alt="">Data Center Technical<span class="lenovo-valid">12/27</span></div>
+                    <div class="lenovo-item"><img src="./badge/Lenovo%20Storage%20Sales%20Certification.png" alt="">Storage Sales<span class="lenovo-valid">12/27</span></div>
+                    <div class="lenovo-item"><img src="./badge/Lenovo%20Cloud%20Sales%20Certification.png" alt="">Cloud Sales<span class="lenovo-valid">11/27</span></div>
+                    <div class="lenovo-item"><img src="./badge/Lenovo%20Education%20Sales%20Certification.png" alt="">Education Sales<span class="lenovo-valid">11/27</span></div>
+                    <div class="lenovo-item"><img src="./badge/Lenovo%20Workstation%20Sales%20Certification.png" alt="">Workstation Sales<span class="lenovo-valid">11/27</span></div>
+                    <div class="lenovo-item"><img src="./badge/Lenovo%20Smart%20Collaboration%20Sales%20Certification.png" alt="">Smart Collaboration<span class="lenovo-valid">11/27</span></div>
+                    <div class="lenovo-item"><img src="./badge/Lenovo%20Data%20and%20Analytics%20Sales%20Certification.png" alt="">Data &amp; Analytics<span class="lenovo-valid">11/27</span></div>
+                    <div class="lenovo-item"><img src="./badge/Lenovo%20Digital%20Workplace%20Solutions%20Sales%20Certification.png" alt="">Digital Workplace<span class="lenovo-valid">11/27</span></div>
+                    <div class="lenovo-item"><img src="./badge/Lenovo%20Infrastructure%20Managed%20Services%20Sales%20Certification.png" alt="">Managed Services<span class="lenovo-valid">11/27</span></div>
+                    <div class="lenovo-item"><img src="./badge/Lenovo%20Infrastructure%20Professional%20Services%20Sales%20Certification.png" alt="">Professional Services<span class="lenovo-valid">11/27</span></div>
+                    <div class="lenovo-item"><img src="./badge/Lenovo%20Infrastructure%20Support%20Services%20Sales%20Certification.png" alt="">Support Services<span class="lenovo-valid">11/27</span></div>
+                    <div class="lenovo-item"><img src="./badge/Lenovo%20Client%20Virtualization%20Sales%20Certification.png" alt="">Client Virtualization<span class="lenovo-valid">11/27</span></div>
+                    <div class="lenovo-item"><img src="./badge/Lenovo%20TruScale%20Device%20as%20a%20Service%20Sales%20Certification.png" alt="">TruScale DaaS<span class="lenovo-valid">11/27</span></div>
+                    <div class="lenovo-item"><img src="./badge/Lenovo%20TruScale%20Infrastructure%20as%20a%20Service%20Sales%20Certification.png" alt="">TruScale IaaS<span class="lenovo-valid">11/27</span></div>
+                    <div class="lenovo-item"><img src="./badge/Lenovo%20Modern%20Workplace%20Sales%20Certification.png" alt="">Modern Workplace<span class="lenovo-valid">11/27</span></div>
+                    <div class="lenovo-item"><img src="./badge/Lenovo%20Intelligent%20Devices%20Support%20Services%20Sales%20Certification.png" alt="">Intelligent Devices Support<span class="lenovo-valid">11/27</span></div>
+                    <div class="lenovo-item"><img src="./badge/Lenovo%20Intelligent%20Devices%20Configuration%20Services%20Sales%20Certification.png" alt="">Intelligent Devices Config<span class="lenovo-valid">11/27</span></div>
+                    <div class="lenovo-item"><img src="./badge/Lenovo%20Sustainability%20Services%20Sales%20Certification.png" alt="">Sustainability Services<span class="lenovo-valid">11/27</span></div>
                 </div>
             </div>
 
-        </div>
+        </section>
 
-        <div class="footer">
+        <p class="footer">
             Autorizzo il trattamento dei dati personali contenuti nel mio CV ex art. 13 D.Lgs 196/2003 e art. 13 GDPR 2016/679.
-        </div>
+        </p>
 
-    </div>
+    </main>
 </div>
 
 <script>
