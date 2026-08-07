@@ -191,6 +191,7 @@
             border-color: #bbf7d0;
         }
 
+        /* STILI MEDAGLIERE / BADGE VISIVI */
         .cert-grid {
             display: table;
             width: 100%;
@@ -203,15 +204,24 @@
 
         .cert-item {
             display: table-cell;
-            padding: 5px 8px;
+            padding: 6px 8px;
             border-bottom: 1px solid #f1f5f9;
             font-size: 8.5pt;
             vertical-align: middle;
         }
 
+        .cert-icon {
+            width: 22px;
+            height: 22px;
+            vertical-align: middle;
+            margin-right: 8px;
+            object-fit: contain;
+        }
+
         .cert-name {
             font-weight: 600;
             color: #0f172a;
+            vertical-align: middle;
         }
 
         .cert-meta {
@@ -219,25 +229,21 @@
             font-size: 8pt;
         }
 
-        .cert-badge-tag {
-            display: inline-block;
-            background-color: #e0f2fe;
-            color: #0369a1;
-            padding: 1px 6px;
-            border-radius: 3px;
+        .cert-verify-btn {
+            color: #0284c7;
+            text-decoration: none;
+            font-weight: 600;
             font-size: 7.5pt;
-            font-weight: 700;
-            margin-right: 6px;
+            padding: 2px 8px;
+            border: 1px solid #bae6fd;
+            border-radius: 4px;
+            background-color: #f0f9ff;
+            transition: all 0.2s ease;
         }
 
-        .cert-badge-hero {
-            background-color: #fef3c7;
-            color: #92400e;
-        }
-
-        .cert-badge-cisco {
-            background-color: #dcfce7;
-            color: #15803d;
+        .cert-verify-btn:hover {
+            background-color: #0284c7;
+            color: #ffffff;
         }
 
         .footer-privacy {
@@ -253,7 +259,7 @@
                 background-color: #ffffff;
                 padding: 0;
             }
-            .download-btn {
+            .download-btn, .cert-verify-btn {
                 display: none;
             }
         }
@@ -312,22 +318,23 @@
     <div class="section">
         <div class="section-title">Certificazioni & Specializzazioni Security</div>
         <div class="cert-grid">
+            
             <!-- CISCO NETWORKING ACADEMY -->
             <div class="cert-row">
-                <div class="cert-item" style="width: 70%;">
-                    <span class="cert-badge-tag cert-badge-cisco">CISCO</span>
+                <div class="cert-item" style="width: 75%;">
+                    <img src="https://cdn.simpleicons.org/cisco/1BA0D7" alt="Cisco Logo" class="cert-icon">
                     <span class="cert-name">Cisco Networking Academy - Linux Unhatched</span>
                 </div>
-                <div class="cert-item" style="width: 30%; text-align: right;">
-                    <a href="https://www.credly.com/badges/106cc14f-e779-4013-bfd5-f7f42179c302/linked_in_profile" target="_blank" class="cert-meta" style="color: #0284c7; text-decoration: none; font-weight: 600;">Verifica Badge 🔗</a>
+                <div class="cert-item" style="width: 25%; text-align: right;">
+                    <a href="https://www.credly.com/badges/106cc14f-e779-4013-bfd5-f7f42179c302/linked_in_profile" target="_blank" class="cert-verify-btn">Verifica Credly 🔗</a>
                 </div>
             </div>
 
             <!-- HEROADMIN SECURITY CERTIFICATIONS -->
             <div class="cert-row">
                 <div class="cert-item">
-                    <span class="cert-badge-tag cert-badge-hero">HEROADMIN</span>
-                    <span class="cert-name">Hardening Active Directory for Hero</span> (27 Ore)
+                    <img src="https://cdn.simpleicons.org/active-directory/0078D4" alt="Active Directory Logo" class="cert-icon">
+                    <span class="cert-name">HeroAdmin - Hardening Active Directory for Hero</span> (27 Ore)
                 </div>
                 <div class="cert-item" style="text-align: right;">
                     <span class="cert-meta">Conseguita: 01/2026</span>
@@ -335,8 +342,8 @@
             </div>
             <div class="cert-row">
                 <div class="cert-item">
-                    <span class="cert-badge-tag cert-badge-hero">HEROADMIN</span>
-                    <span class="cert-name">Hardening Active Directory Integration</span> (27 Ore)
+                    <img src="https://cdn.simpleicons.org/active-directory/0078D4" alt="Active Directory Logo" class="cert-icon">
+                    <span class="cert-name">HeroAdmin - Hardening Active Directory Integration</span> (27 Ore)
                 </div>
                 <div class="cert-item" style="text-align: right;">
                     <span class="cert-meta">Conseguita: 11/2025</span>
@@ -344,8 +351,8 @@
             </div>
             <div class="cert-row">
                 <div class="cert-item">
-                    <span class="cert-badge-tag cert-badge-hero">HEROADMIN</span>
-                    <span class="cert-name">Hardening Active Directory</span> (27 Ore)
+                    <img src="https://cdn.simpleicons.org/active-directory/0078D4" alt="Active Directory Logo" class="cert-icon">
+                    <span class="cert-name">HeroAdmin - Hardening Active Directory</span> (27 Ore)
                 </div>
                 <div class="cert-item" style="text-align: right;">
                     <span class="cert-meta">Conseguita: 07/2025</span>
@@ -355,7 +362,7 @@
             <!-- LENOVO 360 CERTIFICATIONS -->
             <div class="cert-row">
                 <div class="cert-item">
-                    <span class="cert-badge-tag">LENOVO 360</span>
+                    <img src="https://cdn.simpleicons.org/lenovo/E2231A" alt="Lenovo Logo" class="cert-icon">
                     <span class="cert-name">Lenovo Data Center Sales Certification</span>
                 </div>
                 <div class="cert-item" style="text-align: right;">
@@ -364,7 +371,7 @@
             </div>
             <div class="cert-row">
                 <div class="cert-item">
-                    <span class="cert-badge-tag">LENOVO 360</span>
+                    <img src="https://cdn.simpleicons.org/lenovo/E2231A" alt="Lenovo Logo" class="cert-icon">
                     <span class="cert-name">Lenovo Education Sales Certification</span>
                 </div>
                 <div class="cert-item" style="text-align: right;">
@@ -373,7 +380,7 @@
             </div>
             <div class="cert-row">
                 <div class="cert-item">
-                    <span class="cert-badge-tag">LENOVO 360</span>
+                    <img src="https://cdn.simpleicons.org/lenovo/E2231A" alt="Lenovo Logo" class="cert-icon">
                     <span class="cert-name">Lenovo Cloud Sales Certification</span>
                 </div>
                 <div class="cert-item" style="text-align: right;">
@@ -382,7 +389,7 @@
             </div>
             <div class="cert-row">
                 <div class="cert-item">
-                    <span class="cert-badge-tag">LENOVO 360</span>
+                    <img src="https://cdn.simpleicons.org/lenovo/E2231A" alt="Lenovo Logo" class="cert-icon">
                     <span class="cert-name">Lenovo Workstation Sales Certification</span>
                 </div>
                 <div class="cert-item" style="text-align: right;">
@@ -391,7 +398,7 @@
             </div>
             <div class="cert-row">
                 <div class="cert-item">
-                    <span class="cert-badge-tag">LENOVO 360</span>
+                    <img src="https://cdn.simpleicons.org/lenovo/E2231A" alt="Lenovo Logo" class="cert-icon">
                     <span class="cert-name">Lenovo Smart Collaboration Sales Certification</span>
                 </div>
                 <div class="cert-item" style="text-align: right;">
@@ -400,7 +407,7 @@
             </div>
             <div class="cert-row">
                 <div class="cert-item">
-                    <span class="cert-badge-tag">LENOVO 360</span>
+                    <img src="https://cdn.simpleicons.org/lenovo/E2231A" alt="Lenovo Logo" class="cert-icon">
                     <span class="cert-name">Lenovo Data and Analytics Sales Certification</span>
                 </div>
                 <div class="cert-item" style="text-align: right;">
@@ -409,7 +416,7 @@
             </div>
             <div class="cert-row">
                 <div class="cert-item">
-                    <span class="cert-badge-tag">LENOVO 360</span>
+                    <img src="https://cdn.simpleicons.org/lenovo/E2231A" alt="Lenovo Logo" class="cert-icon">
                     <span class="cert-name">Lenovo Storage Sales Certification</span>
                 </div>
                 <div class="cert-item" style="text-align: right;">
@@ -418,7 +425,7 @@
             </div>
             <div class="cert-row">
                 <div class="cert-item">
-                    <span class="cert-badge-tag">LENOVO 360</span>
+                    <img src="https://cdn.simpleicons.org/lenovo/E2231A" alt="Lenovo Logo" class="cert-icon">
                     <span class="cert-name">Lenovo Digital Workplace Solutions Sales Certification</span>
                 </div>
                 <div class="cert-item" style="text-align: right;">
@@ -427,7 +434,7 @@
             </div>
             <div class="cert-row">
                 <div class="cert-item">
-                    <span class="cert-badge-tag">LENOVO 360</span>
+                    <img src="https://cdn.simpleicons.org/lenovo/E2231A" alt="Lenovo Logo" class="cert-icon">
                     <span class="cert-name">Lenovo Infrastructure Professional Services Sales Certification</span>
                 </div>
                 <div class="cert-item" style="text-align: right;">
@@ -436,7 +443,7 @@
             </div>
             <div class="cert-row">
                 <div class="cert-item">
-                    <span class="cert-badge-tag">LENOVO 360</span>
+                    <img src="https://cdn.simpleicons.org/lenovo/E2231A" alt="Lenovo Logo" class="cert-icon">
                     <span class="cert-name">Lenovo TruScale Device as a Service Sales Certification</span>
                 </div>
                 <div class="cert-item" style="text-align: right;">
@@ -445,7 +452,7 @@
             </div>
             <div class="cert-row">
                 <div class="cert-item">
-                    <span class="cert-badge-tag">LENOVO 360</span>
+                    <img src="https://cdn.simpleicons.org/lenovo/E2231A" alt="Lenovo Logo" class="cert-icon">
                     <span class="cert-name">Lenovo Client Virtualization Sales Certification</span>
                 </div>
                 <div class="cert-item" style="text-align: right;">
@@ -454,7 +461,7 @@
             </div>
             <div class="cert-row">
                 <div class="cert-item">
-                    <span class="cert-badge-tag">LENOVO 360</span>
+                    <img src="https://cdn.simpleicons.org/lenovo/E2231A" alt="Lenovo Logo" class="cert-icon">
                     <span class="cert-name">Lenovo Infrastructure Support Services Sales Certification</span>
                 </div>
                 <div class="cert-item" style="text-align: right;">
@@ -463,7 +470,7 @@
             </div>
             <div class="cert-row">
                 <div class="cert-item">
-                    <span class="cert-badge-tag">LENOVO 360</span>
+                    <img src="https://cdn.simpleicons.org/lenovo/E2231A" alt="Lenovo Logo" class="cert-icon">
                     <span class="cert-name">Lenovo Modern Workplace Sales Certification</span>
                 </div>
                 <div class="cert-item" style="text-align: right;">
@@ -472,7 +479,7 @@
             </div>
             <div class="cert-row">
                 <div class="cert-item">
-                    <span class="cert-badge-tag">LENOVO 360</span>
+                    <img src="https://cdn.simpleicons.org/lenovo/E2231A" alt="Lenovo Logo" class="cert-icon">
                     <span class="cert-name">Lenovo Intelligent Devices Support Services Sales Certification</span>
                 </div>
                 <div class="cert-item" style="text-align: right;">
@@ -481,7 +488,7 @@
             </div>
             <div class="cert-row">
                 <div class="cert-item">
-                    <span class="cert-badge-tag">LENOVO 360</span>
+                    <img src="https://cdn.simpleicons.org/lenovo/E2231A" alt="Lenovo Logo" class="cert-icon">
                     <span class="cert-name">Lenovo Intelligent Devices Configuration Services Sales Certification</span>
                 </div>
                 <div class="cert-item" style="text-align: right;">
@@ -490,7 +497,7 @@
             </div>
             <div class="cert-row">
                 <div class="cert-item">
-                    <span class="cert-badge-tag">LENOVO 360</span>
+                    <img src="https://cdn.simpleicons.org/lenovo/E2231A" alt="Lenovo Logo" class="cert-icon">
                     <span class="cert-name">Lenovo Sustainability Services Sales Certification</span>
                 </div>
                 <div class="cert-item" style="text-align: right;">
@@ -501,7 +508,7 @@
             <!-- DATACORE -->
             <div class="cert-row">
                 <div class="cert-item">
-                    <span class="cert-badge-tag">DATACORE</span>
+                    <img src="https://cdn.simpleicons.org/datacamp/0530AD" alt="DataCore Logo" class="cert-icon">
                     <span class="cert-name">DataCore Certified Sales Professional (DCSP)</span>
                 </div>
                 <div class="cert-item" style="text-align: right;">
