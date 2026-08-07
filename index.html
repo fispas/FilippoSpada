@@ -145,7 +145,7 @@
         .badge-gallery {
             display: flex;
             flex-wrap: wrap;
-            gap: 16px;
+            gap: 14px;
             align-items: flex-start;
             margin-top: 10px;
         }
@@ -155,9 +155,9 @@
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
-            width: 115px;
-            min-height: 140px;
-            padding: 12px 10px;
+            width: 120px;
+            min-height: 145px;
+            padding: 10px 8px;
             border: 1px solid #f1f5f9;
             border-radius: 8px;
             background-color: #fafafa;
@@ -172,10 +172,11 @@
             background-color: #ffffff;
         }
 
-        .badge-card svg {
-            width: 50px;
-            height: 50px;
-            margin-bottom: 10px;
+        .badge-card img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            margin-bottom: 8px;
         }
 
         .badge-card .badge-title {
@@ -193,7 +194,7 @@
             margin-top: 4px;
         }
 
-        /* TABELLA ELENCO COMPLETO CERTIFICAZIONI */
+        /* TABELLA ELENCO CERTIFICAZIONI */
         .cert-grid {
             display: table;
             width: 100%;
@@ -217,6 +218,7 @@
             height: 20px;
             vertical-align: middle;
             margin-right: 8px;
+            object-fit: contain;
         }
 
         .cert-name {
@@ -310,7 +312,7 @@
                 box-shadow: none;
                 justify-content: flex-start;
             }
-            .badge-card svg {
+            .badge-card img {
                 width: 20px;
                 height: 20px;
                 margin-right: 10px;
@@ -353,75 +355,121 @@
         <div class="section-title">Verified Digital Badges & Learning Paths</div>
         <div class="badge-gallery">
             
-            <a href="https://www.credly.com/badges/106cc14f-e779-4013-bfd5-f7f42179c302/linked_in_profile" target="_blank" class="badge-card" title="Cisco Networking Academy - Linux Unhatched">
-                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50" fill="#1BA0D7"/><rect x="15" y="40" width="8" height="20" fill="white" rx="4"/><rect x="30" y="25" width="8" height="50" fill="white" rx="4"/><rect x="46" y="10" width="8" height="80" fill="white" rx="4"/><rect x="62" y="25" width="8" height="50" fill="white" rx="4"/><rect x="77" y="40" width="8" height="20" fill="white" rx="4"/></svg>
+            <!-- CISCO -->
+            <a href="https://www.credly.com/badges/106cc14f-e779-4013-bfd5-f7f42179c302/linked_in_profile" target="_blank" class="badge-card" title="Verifica Badge Credly">
+                <img src="badges/image.png" alt="Cisco Linux Unhatched Badge">
                 <span class="badge-title">Linux Unhatched</span>
                 <span class="badge-issuer">Cisco Academy</span>
             </a>
 
+            <!-- HEROADMIN OPENBADGES -->
+            <a href="https://app.open-badge.eu/public/badges/cf5a99bd-cb82-40ba-b7ce-0bb99b3dc74d" target="_blank" class="badge-card" title="Verifica OpenBadge">
+                <img src="badges/Hardening Active Directory For Hero.png" alt="Hardening Active Directory for Hero">
+                <span class="badge-title">AD Hardening for Hero</span>
+                <span class="badge-issuer">HeroAdmin</span>
+            </a>
+
+            <a href="https://app.open-badge.eu/public/badges/4ee130e1-f05e-43ad-bb51-a7d93557c8c3" target="_blank" class="badge-card" title="Verifica OpenBadge">
+                <img src="badges/Hardening Active Directory Integration [HAAD-2402].png" alt="Hardening Active Directory Integration">
+                <span class="badge-title">AD Hardening Integration</span>
+                <span class="badge-issuer">HeroAdmin</span>
+            </a>
+
+            <a href="https://app.open-badge.eu/public/badges/3f56cc52-e53a-410e-87f7-28b7ee2e2e92" target="_blank" class="badge-card" title="Verifica OpenBadge">
+                <img src="badges/Hardening Active Directory.png" alt="Hardening Active Directory">
+                <span class="badge-title">Hardening Active Directory</span>
+                <span class="badge-issuer">HeroAdmin</span>
+            </a>
+
+            <!-- DATACORE & SWARM -->
+            <a href="https://ti-user-certificates.s3.amazonaws.com/c0020adf-9cd3-427f-9351-bee19619d05b/d18b8b61-f259-4b61-b02e-1c265c692ad2-filippo-spada-datacore-certified-sales-professional-dcsp-online-course-april-2021-certificate.pdf" target="_blank" class="badge-card" title="Visualizza Certificato PDF">
+                <img src="badges/DataCore Certified Sales Professional (DCSP).png" alt="DCSP Badge">
+                <span class="badge-title">DCSP Certified</span>
+                <span class="badge-issuer">DataCore</span>
+            </a>
+
+            <a href="https://ti-user-certificates.s3.amazonaws.com/c0020adf-9cd3-427f-9351-bee19619d05b/d18b8b61-f259-4b61-b02e-1c265c692ad2-filippo-spada-4302f56d-3b6b-4ea0-b1a3-72862a2206c4-certificate.pdf" target="_blank" class="badge-card" title="Visualizza Certificato PDF">
+                <img src="badges/DataCore Certified Solution Architect (DCSA) for Swarm Online Course.png" alt="DCSA Swarm Badge">
+                <span class="badge-title">DCSA for Swarm</span>
+                <span class="badge-issuer">DataCore</span>
+            </a>
+
+            <a href="https://ti-user-certificates.s3.amazonaws.com/c0020adf-9cd3-427f-9351-bee19619d05b/d18b8b61-f259-4b61-b02e-1c265c692ad2-filippo-spada-8eea15a6-1b58-466d-bbad-60ecb02dccf7-certificate.pdf" target="_blank" class="badge-card" title="Visualizza Certificato PDF">
+                <img src="badges/DCIE for Swarm Assessment Exam.png" alt="DCIE Swarm Badge">
+                <span class="badge-title">DCIE for Swarm</span>
+                <span class="badge-issuer">DataCore</span>
+            </a>
+
+            <a href="https://ti-user-certificates.s3.amazonaws.com/c0020adf-9cd3-427f-9351-bee19619d05b/d18b8b61-f259-4b61-b02e-1c265c692ad2-filippo-spada-7b0722ba-db0c-44db-ac1c-ee10b78e7cba-certificate.pdf" target="_blank" class="badge-card" title="Visualizza Certificato PDF">
+                <img src="badges/Swarm Deep Dive Online Course.png" alt="Swarm Deep Dive Badge">
+                <span class="badge-title">Swarm Deep Dive</span>
+                <span class="badge-issuer">DataCore</span>
+            </a>
+
+            <!-- MICROSOFT LEARN -->
             <a href="https://learn.microsoft.com/it-it/training/paths/deploy-manage-identity-infrastructure/" target="_blank" class="badge-card">
-                <svg viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg"><path fill="#f35325" d="M0 0h11v11H0z"/><path fill="#81bc06" d="M12 0h11v11H12z"/><path fill="#05a6f0" d="M0 12h11v11H0z"/><path fill="#ffba08" d="M12 12h11v11H12z"/></svg>
-                <span class="badge-title">Deploy & Manage Identity Infrastructure</span>
+                <img src="badges/deploy-and-manage-identity-infrastructure.png" alt="Identity Infrastructure Badge">
+                <span class="badge-title">Identity Infrastructure</span>
                 <span class="badge-issuer">Microsoft Learn</span>
             </a>
 
             <a href="https://learn.microsoft.com/it-it/training/paths/implement-windows-server-iaas-virtual-machine-identity/" target="_blank" class="badge-card">
-                <svg viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg"><path fill="#f35325" d="M0 0h11v11H0z"/><path fill="#81bc06" d="M12 0h11v11H12z"/><path fill="#05a6f0" d="M0 12h11v11H0z"/><path fill="#ffba08" d="M12 12h11v11H12z"/></svg>
-                <span class="badge-title">Windows Server IaaS VM Identity</span>
+                <img src="badges/implement-windows-server-iaas-vm-identity.png" alt="Windows Server IaaS Identity Badge">
+                <span class="badge-title">Windows Server IaaS Identity</span>
                 <span class="badge-issuer">Microsoft Learn</span>
             </a>
 
             <a href="https://learn.microsoft.com/it-it/training/paths/active-directory-domain-services/" target="_blank" class="badge-card">
-                <svg viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg"><path fill="#f35325" d="M0 0h11v11H0z"/><path fill="#81bc06" d="M12 0h11v11H12z"/><path fill="#05a6f0" d="M0 12h11v11H0z"/><path fill="#ffba08" d="M12 12h11v11H12z"/></svg>
-                <span class="badge-title">Active Directory Domain Services</span>
+                <img src="badges/active-directory-domain-services.png" alt="Active Directory Domain Services Badge">
+                <span class="badge-title">AD Domain Services</span>
+                <span class="badge-issuer">Microsoft Learn</span>
+            </a>
+
+            <a href="https://learn.microsoft.com/it-it/training/modules/deploy-manage-azure-iaas-active-directory-domain-controllers-azure/" target="_blank" class="badge-card">
+                <img src="badges/deploy-and-manage-azure-iaas-active-directory-domain-controllers-in-azure.png" alt="Azure AD DCs Badge">
+                <span class="badge-title">Azure IaaS AD DCs</span>
                 <span class="badge-issuer">Microsoft Learn</span>
             </a>
 
             <a href="https://learn.microsoft.com/it-it/training/modules/implement-hybrid-identity-windows-server/" target="_blank" class="badge-card">
-                <svg viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg"><path fill="#f35325" d="M0 0h11v11H0z"/><path fill="#81bc06" d="M12 0h11v11H12z"/><path fill="#05a6f0" d="M0 12h11v11H0z"/><path fill="#ffba08" d="M12 12h11v11H12z"/></svg>
-                <span class="badge-title">Implement Hybrid Identity</span>
+                <img src="badges/implement-hybrid-identity-with-windows-server.png" alt="Hybrid Identity Badge">
+                <span class="badge-title">Hybrid Identity</span>
                 <span class="badge-issuer">Microsoft Learn</span>
             </a>
 
             <a href="https://learn.microsoft.com/it-it/training/modules/implement-manage-active-directory-certificate-services/" target="_blank" class="badge-card">
-                <svg viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg"><path fill="#f35325" d="M0 0h11v11H0z"/><path fill="#81bc06" d="M12 0h11v11H12z"/><path fill="#05a6f0" d="M0 12h11v11H0z"/><path fill="#ffba08" d="M12 12h11v11H12z"/></svg>
+                <img src="badges/implement-and-manage-active-directory-certificate-services.png" alt="AD Certificate Services Badge">
                 <span class="badge-title">Manage AD CS</span>
                 <span class="badge-issuer">Microsoft Learn</span>
             </a>
 
+            <a href="https://learn.microsoft.com/it-it/training/modules/manage-advanced-features-of-ad-ds/" target="_blank" class="badge-card">
+                <img src="badges/manage-advanced-features-of-ad-ds.png" alt="Advanced AD DS Features Badge">
+                <span class="badge-title">Advanced AD DS Features</span>
+                <span class="badge-issuer">Microsoft Learn</span>
+            </a>
+
             <a href="https://learn.microsoft.com/it-it/training/modules/implement-group-policy-objects/" target="_blank" class="badge-card">
-                <svg viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg"><path fill="#f35325" d="M0 0h11v11H0z"/><path fill="#81bc06" d="M12 0h11v11H12z"/><path fill="#05a6f0" d="M0 12h11v11H0z"/><path fill="#ffba08" d="M12 12h11v11H12z"/></svg>
-                <span class="badge-title">Implement Group Policy Objects</span>
-                <span class="badge-issuer">Microsoft Learn</span>
-            </a>
-
-            <a href="https://learn.microsoft.com/it-it/powershell/scripting/learn/ps101/01-getting-started?view=powershell-7.6" target="_blank" class="badge-card">
-                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="10" fill="#012456"/><polyline points="20,25 50,50 20,75" fill="none" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><line x1="55" y1="75" x2="85" y2="75" stroke="white" stroke-width="8" stroke-linecap="round"/></svg>
-                <span class="badge-title">PowerShell 101: Getting Started</span>
-                <span class="badge-issuer">Microsoft Learn</span>
-            </a>
-
-            <a href="https://learn.microsoft.com/it-it/powershell/scripting/learn/ps101/04-pipelines?view=powershell-7.6" target="_blank" class="badge-card">
-                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="10" fill="#012456"/><polyline points="20,25 50,50 20,75" fill="none" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><line x1="55" y1="75" x2="85" y2="75" stroke="white" stroke-width="8" stroke-linecap="round"/></svg>
-                <span class="badge-title">PowerShell 101: Pipelines</span>
-                <span class="badge-issuer">Microsoft Learn</span>
-            </a>
-
-            <a href="https://learn.microsoft.com/it-it/powershell/scripting/learn/ps101/02-help-system?view=powershell-7.6" target="_blank" class="badge-card">
-                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="10" fill="#012456"/><polyline points="20,25 50,50 20,75" fill="none" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><line x1="55" y1="75" x2="85" y2="75" stroke="white" stroke-width="8" stroke-linecap="round"/></svg>
-                <span class="badge-title">PowerShell 101: Help System</span>
-                <span class="badge-issuer">Microsoft Learn</span>
-            </a>
-
-            <a href="https://learn.microsoft.com/it-it/training/paths/describe-business-value-microsoft-power-platform/" target="_blank" class="badge-card">
-                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="10" fill="#f2c811"/><rect x="20" y="55" width="16" height="30" fill="#333333"/><rect x="42" y="35" width="16" height="50" fill="#333333"/><rect x="64" y="15" width="16" height="70" fill="#333333"/></svg>
-                <span class="badge-title">Power Platform Business Value</span>
+                <img src="badges/implement-group-policy-objects.png" alt="Group Policy Objects Badge">
+                <span class="badge-title">Implement GPOs</span>
                 <span class="badge-issuer">Microsoft Learn</span>
             </a>
 
             <a href="https://learn.microsoft.com/it-it/training/modules/manage-active-directory-domain-services-flexible-single-master-operation-roles/" target="_blank" class="badge-card">
-                <svg viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg"><path fill="#f35325" d="M0 0h11v11H0z"/><path fill="#81bc06" d="M12 0h11v11H12z"/><path fill="#05a6f0" d="M0 12h11v11H0z"/><path fill="#ffba08" d="M12 12h11v11H12z"/></svg>
-                <span class="badge-title">Manage AD DS FSMO Roles</span>
+                <img src="badges/manage-ad-ds-domain-controllers-and-fsmo-roles.png" alt="AD DS FSMO Roles Badge">
+                <span class="badge-title">AD DS FSMO Roles</span>
+                <span class="badge-issuer">Microsoft Learn</span>
+            </a>
+
+            <a href="https://learn.microsoft.com/it-it/training/modules/introduction-to-ad-ds/" target="_blank" class="badge-card">
+                <img src="badges/introduction-to-ad-ds.png" alt="Intro to AD DS Badge">
+                <span class="badge-title">Intro to AD DS</span>
+                <span class="badge-issuer">Microsoft Learn</span>
+            </a>
+
+            <a href="https://learn.microsoft.com/it-it/training/paths/describe-business-value-microsoft-power-platform/" target="_blank" class="badge-card">
+                <img src="badges/power-platform-learning-path.png" alt="Power Platform Badge">
+                <span class="badge-title">Power Platform Value</span>
                 <span class="badge-issuer">Microsoft Learn</span>
             </a>
 
@@ -456,192 +504,29 @@
         </ul>
     </div>
 
+    <!-- LENOVO 360 PARTNER ECOSYSTEM -->
     <div class="section">
-        <div class="section-title">Certificazioni Aziendali & Partner</div>
+        <div class="section-title">Certificazioni Lenovo 360 Partner Ecosystem</div>
         <div class="cert-grid">
-
-            <div class="cert-row">
-                <div class="cert-item" style="width: 75%;">
-                    <svg class="cert-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="10" fill="#0078D4"/><circle cx="50" cy="35" r="16" fill="white"/><path d="M20 85 Q50 45 80 85 Z" fill="white"/></svg>
-                    <span class="cert-name">HeroAdmin - Hardening Active Directory for Hero</span> (27 Ore)
-                </div>
-                <div class="cert-item" style="width: 25%; text-align: right;">
-                    <span class="cert-meta">Conseguita: 01/2026</span>
-                </div>
-            </div>
-            <div class="cert-row">
-                <div class="cert-item">
-                    <svg class="cert-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="10" fill="#0078D4"/><circle cx="50" cy="35" r="16" fill="white"/><path d="M20 85 Q50 45 80 85 Z" fill="white"/></svg>
-                    <span class="cert-name">HeroAdmin - Hardening Active Directory Integration</span> (27 Ore)
-                </div>
-                <div class="cert-item" style="text-align: right;">
-                    <span class="cert-meta">Conseguita: 11/2025</span>
-                </div>
-            </div>
-            <div class="cert-row">
-                <div class="cert-item">
-                    <svg class="cert-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="10" fill="#0078D4"/><circle cx="50" cy="35" r="16" fill="white"/><path d="M20 85 Q50 45 80 85 Z" fill="white"/></svg>
-                    <span class="cert-name">HeroAdmin - Hardening Active Directory</span> (27 Ore)
-                </div>
-                <div class="cert-item" style="text-align: right;">
-                    <span class="cert-meta">Conseguita: 07/2025</span>
-                </div>
-            </div>
-
-            <div class="cert-row">
-                <div class="cert-item">
-                    <svg class="cert-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="10" fill="#E2231A"/><text x="50" y="55" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle" alignment-baseline="middle">Lenovo</text></svg>
-                    <span class="cert-name">Lenovo Data Center Sales Certification</span>
-                </div>
-                <div class="cert-item" style="text-align: right;">
-                    <span class="cert-meta">Valida fino a: 12/2027</span>
-                </div>
-            </div>
-            <div class="cert-row">
-                <div class="cert-item">
-                    <svg class="cert-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="10" fill="#E2231A"/><text x="50" y="55" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle" alignment-baseline="middle">Lenovo</text></svg>
-                    <span class="cert-name">Lenovo Education Sales Certification</span>
-                </div>
-                <div class="cert-item" style="text-align: right;">
-                    <span class="cert-meta">Valida fino a: 11/2027</span>
-                </div>
-            </div>
-            <div class="cert-row">
-                <div class="cert-item">
-                    <svg class="cert-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="10" fill="#E2231A"/><text x="50" y="55" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle" alignment-baseline="middle">Lenovo</text></svg>
-                    <span class="cert-name">Lenovo Cloud Sales Certification</span>
-                </div>
-                <div class="cert-item" style="text-align: right;">
-                    <span class="cert-meta">Valida fino a: 11/2027</span>
-                </div>
-            </div>
-            <div class="cert-row">
-                <div class="cert-item">
-                    <svg class="cert-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="10" fill="#E2231A"/><text x="50" y="55" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle" alignment-baseline="middle">Lenovo</text></svg>
-                    <span class="cert-name">Lenovo Workstation Sales Certification</span>
-                </div>
-                <div class="cert-item" style="text-align: right;">
-                    <span class="cert-meta">Valida fino a: 11/2027</span>
-                </div>
-            </div>
-            <div class="cert-row">
-                <div class="cert-item">
-                    <svg class="cert-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="10" fill="#E2231A"/><text x="50" y="55" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle" alignment-baseline="middle">Lenovo</text></svg>
-                    <span class="cert-name">Lenovo Smart Collaboration Sales Certification</span>
-                </div>
-                <div class="cert-item" style="text-align: right;">
-                    <span class="cert-meta">Valida fino a: 11/2027</span>
-                </div>
-            </div>
-            <div class="cert-row">
-                <div class="cert-item">
-                    <svg class="cert-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="10" fill="#E2231A"/><text x="50" y="55" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle" alignment-baseline="middle">Lenovo</text></svg>
-                    <span class="cert-name">Lenovo Data and Analytics Sales Certification</span>
-                </div>
-                <div class="cert-item" style="text-align: right;">
-                    <span class="cert-meta">Valida fino a: 11/2027</span>
-                </div>
-            </div>
-            <div class="cert-row">
-                <div class="cert-item">
-                    <svg class="cert-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="10" fill="#E2231A"/><text x="50" y="55" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle" alignment-baseline="middle">Lenovo</text></svg>
-                    <span class="cert-name">Lenovo Storage Sales Certification</span>
-                </div>
-                <div class="cert-item" style="text-align: right;">
-                    <span class="cert-meta">Valida fino a: 12/2027</span>
-                </div>
-            </div>
-            <div class="cert-row">
-                <div class="cert-item">
-                    <svg class="cert-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="10" fill="#E2231A"/><text x="50" y="55" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle" alignment-baseline="middle">Lenovo</text></svg>
-                    <span class="cert-name">Lenovo Digital Workplace Solutions Sales Certification</span>
-                </div>
-                <div class="cert-item" style="text-align: right;">
-                    <span class="cert-meta">Valida fino a: 11/2027</span>
-                </div>
-            </div>
-            <div class="cert-row">
-                <div class="cert-item">
-                    <svg class="cert-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="10" fill="#E2231A"/><text x="50" y="55" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle" alignment-baseline="middle">Lenovo</text></svg>
-                    <span class="cert-name">Lenovo Infrastructure Professional Services Sales Certification</span>
-                </div>
-                <div class="cert-item" style="text-align: right;">
-                    <span class="cert-meta">Valida fino a: 11/2027</span>
-                </div>
-            </div>
-            <div class="cert-row">
-                <div class="cert-item">
-                    <svg class="cert-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="10" fill="#E2231A"/><text x="50" y="55" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle" alignment-baseline="middle">Lenovo</text></svg>
-                    <span class="cert-name">Lenovo TruScale Device as a Service Sales Certification</span>
-                </div>
-                <div class="cert-item" style="text-align: right;">
-                    <span class="cert-meta">Valida fino a: 11/2027</span>
-                </div>
-            </div>
-            <div class="cert-row">
-                <div class="cert-item">
-                    <svg class="cert-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="10" fill="#E2231A"/><text x="50" y="55" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle" alignment-baseline="middle">Lenovo</text></svg>
-                    <span class="cert-name">Lenovo Client Virtualization Sales Certification</span>
-                </div>
-                <div class="cert-item" style="text-align: right;">
-                    <span class="cert-meta">Valida fino a: 11/2027</span>
-                </div>
-            </div>
-            <div class="cert-row">
-                <div class="cert-item">
-                    <svg class="cert-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="10" fill="#E2231A"/><text x="50" y="55" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle" alignment-baseline="middle">Lenovo</text></svg>
-                    <span class="cert-name">Lenovo Infrastructure Support Services Sales Certification</span>
-                </div>
-                <div class="cert-item" style="text-align: right;">
-                    <span class="cert-meta">Valida fino a: 11/2027</span>
-                </div>
-            </div>
-            <div class="cert-row">
-                <div class="cert-item">
-                    <svg class="cert-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="10" fill="#E2231A"/><text x="50" y="55" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle" alignment-baseline="middle">Lenovo</text></svg>
-                    <span class="cert-name">Lenovo Modern Workplace Sales Certification</span>
-                </div>
-                <div class="cert-item" style="text-align: right;">
-                    <span class="cert-meta">Valida fino a: 11/2027</span>
-                </div>
-            </div>
-            <div class="cert-row">
-                <div class="cert-item">
-                    <svg class="cert-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="10" fill="#E2231A"/><text x="50" y="55" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle" alignment-baseline="middle">Lenovo</text></svg>
-                    <span class="cert-name">Lenovo Intelligent Devices Support Services Sales Certification</span>
-                </div>
-                <div class="cert-item" style="text-align: right;">
-                    <span class="cert-meta">Valida fino a: 11/2027</span>
-                </div>
-            </div>
-            <div class="cert-row">
-                <div class="cert-item">
-                    <svg class="cert-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="10" fill="#E2231A"/><text x="50" y="55" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle" alignment-baseline="middle">Lenovo</text></svg>
-                    <span class="cert-name">Lenovo Intelligent Devices Configuration Services Sales Certification</span>
-                </div>
-                <div class="cert-item" style="text-align: right;">
-                    <span class="cert-meta">Valida fino a: 11/2027</span>
-                </div>
-            </div>
-            <div class="cert-row">
-                <div class="cert-item">
-                    <svg class="cert-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="10" fill="#E2231A"/><text x="50" y="55" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle" alignment-baseline="middle">Lenovo</text></svg>
-                    <span class="cert-name">Lenovo Sustainability Services Sales Certification</span>
-                </div>
-                <div class="cert-item" style="text-align: right;">
-                    <span class="cert-meta">Valida fino a: 11/2027</span>
-                </div>
-            </div>
-
-            <div class="cert-row">
-                <div class="cert-item">
-                    <svg class="cert-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="10" fill="#0530AD"/><text x="50" y="55" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="white" text-anchor="middle" alignment-baseline="middle">DC</text></svg>
-                    <span class="cert-name">DataCore Certified Sales Professional (DCSP)</span>
-                </div>
-                <div class="cert-item" style="text-align: right;">
-                    <span class="cert-meta">Conseguita: 07/2021</span>
-                </div>
-            </div>
+            <div class="cert-row"><div class="cert-item" style="width: 75%;"><img src="badges/Lenovo Data Center Sales Certification.png" alt="Lenovo Data Center" class="cert-icon"><span class="cert-name">Lenovo Data Center Sales Certification</span></div><div class="cert-item" style="width: 25%; text-align: right;"><span class="cert-meta">Valida fino a: 12/2027</span></div></div>
+            <div class="cert-row"><div class="cert-item"><img src="badges/Lenovo Data Center Technical Certification.png" alt="Lenovo Tech" class="cert-icon"><span class="cert-name">Lenovo Data Center Technical Certification</span></div><div class="cert-item" style="text-align: right;"><span class="cert-meta">Valida fino a: 12/2027</span></div></div>
+            <div class="cert-row"><div class="cert-item"><img src="badges/Lenovo Storage Sales Certification.png" alt="Lenovo Storage" class="cert-icon"><span class="cert-name">Lenovo Storage Sales Certification</span></div><div class="cert-item" style="text-align: right;"><span class="cert-meta">Valida fino a: 12/2027</span></div></div>
+            <div class="cert-row"><div class="cert-item"><img src="badges/Lenovo Cloud Sales Certification.png" alt="Lenovo Cloud" class="cert-icon"><span class="cert-name">Lenovo Cloud Sales Certification</span></div><div class="cert-item" style="text-align: right;"><span class="cert-meta">Valida fino a: 11/2027</span></div></div>
+            <div class="cert-row"><div class="cert-item"><img src="badges/Lenovo Education Sales Certification.png" alt="Lenovo Education" class="cert-icon"><span class="cert-name">Lenovo Education Sales Certification</span></div><div class="cert-item" style="text-align: right;"><span class="cert-meta">Valida fino a: 11/2027</span></div></div>
+            <div class="cert-row"><div class="cert-item"><img src="badges/Lenovo Workstation Sales Certification.png" alt="Lenovo Workstation" class="cert-icon"><span class="cert-name">Lenovo Workstation Sales Certification</span></div><div class="cert-item" style="text-align: right;"><span class="cert-meta">Valida fino a: 11/2027</span></div></div>
+            <div class="cert-row"><div class="cert-item"><img src="badges/Lenovo Smart Collaboration Sales Certification.png" alt="Lenovo Smart Collab" class="cert-icon"><span class="cert-name">Lenovo Smart Collaboration Sales Certification</span></div><div class="cert-item" style="text-align: right;"><span class="cert-meta">Valida fino a: 11/2027</span></div></div>
+            <div class="cert-row"><div class="cert-item"><img src="badges/Lenovo Data and Analytics Sales Certification.png" alt="Lenovo Analytics" class="cert-icon"><span class="cert-name">Lenovo Data and Analytics Sales Certification</span></div><div class="cert-item" style="text-align: right;"><span class="cert-meta">Valida fino a: 11/2027</span></div></div>
+            <div class="cert-row"><div class="cert-item"><img src="badges/Lenovo Digital Workplace Solutions Sales Certification.png" alt="Lenovo Digital Workplace" class="cert-icon"><span class="cert-name">Lenovo Digital Workplace Solutions Sales Certification</span></div><div class="cert-item" style="text-align: right;"><span class="cert-meta">Valida fino a: 11/2027</span></div></div>
+            <div class="cert-row"><div class="cert-item"><img src="badges/Lenovo Infrastructure Managed Services Sales Certification.png" alt="Lenovo Managed Services" class="cert-icon"><span class="cert-name">Lenovo Infrastructure Managed Services Sales Certification</span></div><div class="cert-item" style="text-align: right;"><span class="cert-meta">Valida fino a: 11/2027</span></div></div>
+            <div class="cert-row"><div class="cert-item"><img src="badges/Lenovo Infrastructure Professional Services Sales Certification.png" alt="Lenovo Pro Services" class="cert-icon"><span class="cert-name">Lenovo Infrastructure Professional Services Sales Certification</span></div><div class="cert-item" style="text-align: right;"><span class="cert-meta">Valida fino a: 11/2027</span></div></div>
+            <div class="cert-row"><div class="cert-item"><img src="badges/Lenovo Infrastructure Support Services Sales Certification.png" alt="Lenovo Support Services" class="cert-icon"><span class="cert-name">Lenovo Infrastructure Support Services Sales Certification</span></div><div class="cert-item" style="text-align: right;"><span class="cert-meta">Valida fino a: 11/2027</span></div></div>
+            <div class="cert-row"><div class="cert-item"><img src="badges/Lenovo Client Virtualization Sales Certification.png" alt="Lenovo Client Virt" class="cert-icon"><span class="cert-name">Lenovo Client Virtualization Sales Certification</span></div><div class="cert-item" style="text-align: right;"><span class="cert-meta">Valida fino a: 11/2027</span></div></div>
+            <div class="cert-row"><div class="cert-item"><img src="badges/Lenovo TruScale Device as a Service Sales Certification.png" alt="Lenovo TruScale DaaS" class="cert-icon"><span class="cert-name">Lenovo TruScale Device as a Service Sales Certification</span></div><div class="cert-item" style="text-align: right;"><span class="cert-meta">Valida fino a: 11/2027</span></div></div>
+            <div class="cert-row"><div class="cert-item"><img src="badges/Lenovo TruScale Infrastructure as a Service Sales Certification.png" alt="Lenovo TruScale IaaS" class="cert-icon"><span class="cert-name">Lenovo TruScale Infrastructure as a Service Sales Certification</span></div><div class="cert-item" style="text-align: right;"><span class="cert-meta">Valida fino a: 11/2027</span></div></div>
+            <div class="cert-row"><div class="cert-item"><img src="badges/Lenovo Modern Workplace Sales Certification.png" alt="Lenovo Modern Workplace" class="cert-icon"><span class="cert-name">Lenovo Modern Workplace Sales Certification</span></div><div class="cert-item" style="text-align: right;"><span class="cert-meta">Valida fino a: 11/2027</span></div></div>
+            <div class="cert-row"><div class="cert-item"><img src="badges/Lenovo Intelligent Devices Support Services Sales Certification.png" alt="Lenovo Intelligent Devices" class="cert-icon"><span class="cert-name">Lenovo Intelligent Devices Support Services Sales Certification</span></div><div class="cert-item" style="text-align: right;"><span class="cert-meta">Valida fino a: 11/2027</span></div></div>
+            <div class="cert-row"><div class="cert-item"><img src="badges/Lenovo Intelligent Devices Configuration Services Sales Certification.png" alt="Lenovo Config Services" class="cert-icon"><span class="cert-name">Lenovo Intelligent Devices Configuration Services Sales Certification</span></div><div class="cert-item" style="text-align: right;"><span class="cert-meta">Valida fino a: 11/2027</span></div></div>
+            <div class="cert-row"><div class="cert-item"><img src="badges/Lenovo Sustainability Services Sales Certification.png" alt="Lenovo Sustainability" class="cert-icon"><span class="cert-name">Lenovo Sustainability Services Sales Certification</span></div><div class="cert-item" style="text-align: right;"><span class="cert-meta">Valida fino a: 11/2027</span></div></div>
         </div>
     </div>
 
