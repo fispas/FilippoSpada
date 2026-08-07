@@ -402,7 +402,7 @@ body{
 /* ══════════ PRINT / PDF ══════════ */
 @page{
     size:A4;
-    margin:10mm 0;
+    margin:0; /* Rimuove i margini di pagina predefiniti azzerando header e footer del browser */
 }
 
 @media print{
@@ -413,6 +413,8 @@ body{
         width:210mm;
         font-size:8pt;
         line-height:1.35;
+        padding-top:10mm; /* Aggiunge i margini verticali per il contenuto */
+        padding-bottom:10mm;
     }
 
     *{
