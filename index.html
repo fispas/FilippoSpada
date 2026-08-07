@@ -146,7 +146,7 @@
             display: flex;
             flex-wrap: wrap;
             gap: 16px;
-            align-items: center;
+            align-items: flex-start;
             margin-top: 10px;
         }
 
@@ -154,9 +154,10 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            width: 110px;
-            padding: 10px;
+            justify-content: flex-start;
+            width: 115px;
+            min-height: 140px;
+            padding: 12px 10px;
             border: 1px solid #f1f5f9;
             border-radius: 8px;
             background-color: #fafafa;
@@ -172,10 +173,10 @@
         }
 
         .badge-card img {
-            width: 80px;
-            height: 80px;
+            width: 50px;
+            height: 50px;
             object-fit: contain;
-            margin-bottom: 6px;
+            margin-bottom: 10px;
         }
 
         .badge-card .badge-title {
@@ -183,14 +184,14 @@
             font-weight: 700;
             color: #0f172a;
             text-align: center;
-            line-height: 1.1;
+            line-height: 1.2;
         }
 
         .badge-card .badge-issuer {
             font-size: 6.5pt;
             color: #64748b;
             text-align: center;
-            margin-top: 2px;
+            margin-top: 4px;
         }
 
         /* TABELLA ELENCO COMPLETO CERTIFICAZIONI */
@@ -297,9 +298,32 @@
             .download-btn {
                 display: none;
             }
+            .badge-gallery {
+                display: block;
+            }
             .badge-card {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                min-height: auto;
                 border: none;
+                padding: 4px 0;
                 background: transparent;
+                box-shadow: none;
+                justify-content: flex-start;
+            }
+            .badge-card img {
+                width: 20px;
+                height: 20px;
+                margin-right: 10px;
+                margin-bottom: 0;
+            }
+            .badge-card .badge-title {
+                font-size: 8.5pt;
+                text-align: left;
+            }
+            .badge-card .badge-issuer {
+                display: none;
             }
         }
     </style>
@@ -328,17 +352,83 @@
 
     <!-- SEZIONE MEDAGLIERE VISIVO BADGES -->
     <div class="section">
-        <div class="section-title">Verified Digital Badges</div>
+        <div class="section-title">Verified Digital Badges & Learning Paths</div>
         <div class="badge-gallery">
             
             <!-- CISCO BADGE -->
-            <a href="https://www.credly.com/badges/106cc14f-e779-4013-bfd5-f7f42179c302/linked_in_profile" target="_blank" class="badge-card" title="Clicca per verificare il badge su Credly">
+            <a href="https://www.credly.com/badges/106cc14f-e779-4013-bfd5-f7f42179c302/linked_in_profile" target="_blank" class="badge-card" title="Cisco Networking Academy - Linux Unhatched">
                 <img src="https://images.credly.com/size/110x110/assets/f45a2786-218a-44aa-9c2f-e2d42721fdf1/Linux_Unhatched.png" alt="Cisco Linux Unhatched Badge">
                 <span class="badge-title">Linux Unhatched</span>
                 <span class="badge-issuer">Cisco Academy</span>
             </a>
 
-            <!-- Altri badge che otterrai potranno essere aggiunti qui con la stessa struttura -->
+            <!-- MICROSOFT LEARN PATHS & MODULES -->
+            <a href="https://learn.microsoft.com/it-it/training/paths/deploy-manage-identity-infrastructure/" target="_blank" class="badge-card">
+                <img src="https://cdn.simpleicons.org/microsoft/0078D4" alt="Microsoft Learn">
+                <span class="badge-title">Deploy & Manage Identity Infrastructure</span>
+                <span class="badge-issuer">Microsoft Learn</span>
+            </a>
+
+            <a href="https://learn.microsoft.com/it-it/training/paths/implement-windows-server-iaas-virtual-machine-identity/" target="_blank" class="badge-card">
+                <img src="https://cdn.simpleicons.org/microsoft/0078D4" alt="Microsoft Learn">
+                <span class="badge-title">Windows Server IaaS VM Identity</span>
+                <span class="badge-issuer">Microsoft Learn</span>
+            </a>
+
+            <a href="https://learn.microsoft.com/it-it/training/paths/active-directory-domain-services/" target="_blank" class="badge-card">
+                <img src="https://cdn.simpleicons.org/microsoft/0078D4" alt="Microsoft Learn">
+                <span class="badge-title">Active Directory Domain Services</span>
+                <span class="badge-issuer">Microsoft Learn</span>
+            </a>
+
+            <a href="https://learn.microsoft.com/it-it/training/modules/implement-hybrid-identity-windows-server/" target="_blank" class="badge-card">
+                <img src="https://cdn.simpleicons.org/microsoft/0078D4" alt="Microsoft Learn">
+                <span class="badge-title">Implement Hybrid Identity</span>
+                <span class="badge-issuer">Microsoft Learn</span>
+            </a>
+
+            <a href="https://learn.microsoft.com/it-it/training/modules/implement-manage-active-directory-certificate-services/" target="_blank" class="badge-card">
+                <img src="https://cdn.simpleicons.org/microsoft/0078D4" alt="Microsoft Learn">
+                <span class="badge-title">Manage AD CS</span>
+                <span class="badge-issuer">Microsoft Learn</span>
+            </a>
+
+            <a href="https://learn.microsoft.com/it-it/training/modules/implement-group-policy-objects/" target="_blank" class="badge-card">
+                <img src="https://cdn.simpleicons.org/microsoft/0078D4" alt="Microsoft Learn">
+                <span class="badge-title">Implement Group Policy Objects</span>
+                <span class="badge-issuer">Microsoft Learn</span>
+            </a>
+
+            <a href="https://learn.microsoft.com/it-it/powershell/scripting/learn/ps101/01-getting-started?view=powershell-7.6" target="_blank" class="badge-card">
+                <img src="https://cdn.simpleicons.org/powershell/5391FE" alt="PowerShell">
+                <span class="badge-title">PowerShell 101: Getting Started</span>
+                <span class="badge-issuer">Microsoft Learn</span>
+            </a>
+
+            <a href="https://learn.microsoft.com/it-it/powershell/scripting/learn/ps101/04-pipelines?view=powershell-7.6" target="_blank" class="badge-card">
+                <img src="https://cdn.simpleicons.org/powershell/5391FE" alt="PowerShell">
+                <span class="badge-title">PowerShell 101: Pipelines</span>
+                <span class="badge-issuer">Microsoft Learn</span>
+            </a>
+
+            <a href="https://learn.microsoft.com/it-it/powershell/scripting/learn/ps101/02-help-system?view=powershell-7.6" target="_blank" class="badge-card">
+                <img src="https://cdn.simpleicons.org/powershell/5391FE" alt="PowerShell">
+                <span class="badge-title">PowerShell 101: Help System</span>
+                <span class="badge-issuer">Microsoft Learn</span>
+            </a>
+
+            <a href="https://learn.microsoft.com/it-it/training/paths/describe-business-value-microsoft-power-platform/" target="_blank" class="badge-card">
+                <img src="https://cdn.simpleicons.org/powerbi/F2C811" alt="Power Platform">
+                <span class="badge-title">Power Platform Business Value</span>
+                <span class="badge-issuer">Microsoft Learn</span>
+            </a>
+
+            <!-- Altri moduli MS Learn compattati per mantenere pulito il layout (le URL intermedie fornite possono essere accorpate qui) -->
+            <a href="https://learn.microsoft.com/it-it/training/modules/manage-active-directory-domain-services-flexible-single-master-operation-roles/" target="_blank" class="badge-card">
+                <img src="https://cdn.simpleicons.org/microsoft/0078D4" alt="Microsoft Learn">
+                <span class="badge-title">Manage AD DS FSMO Roles</span>
+                <span class="badge-issuer">Microsoft Learn</span>
+            </a>
 
         </div>
     </div>
@@ -372,27 +462,16 @@
     </div>
 
     <div class="section">
-        <div class="section-title">Certificazioni & Specializzazioni Security</div>
+        <div class="section-title">Certificazioni Aziendali & Partner</div>
         <div class="cert-grid">
-            
-            <!-- CISCO -->
-            <div class="cert-row">
-                <div class="cert-item" style="width: 75%;">
-                    <img src="https://cdn.simpleicons.org/cisco/1BA0D7" alt="Cisco Logo" class="cert-icon">
-                    <span class="cert-name">Cisco Networking Academy - Linux Unhatched</span>
-                </div>
-                <div class="cert-item" style="width: 25%; text-align: right;">
-                    <span class="cert-meta">Verified Badge</span>
-                </div>
-            </div>
 
             <!-- HEROADMIN SECURITY CERTIFICATIONS -->
             <div class="cert-row">
-                <div class="cert-item">
+                <div class="cert-item" style="width: 75%;">
                     <img src="https://cdn.simpleicons.org/active-directory/0078D4" alt="Active Directory Logo" class="cert-icon">
                     <span class="cert-name">HeroAdmin - Hardening Active Directory for Hero</span> (27 Ore)
                 </div>
-                <div class="cert-item" style="text-align: right;">
+                <div class="cert-item" style="width: 25%; text-align: right;">
                     <span class="cert-meta">Conseguita: 01/2026</span>
                 </div>
             </div>
