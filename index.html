@@ -354,6 +354,9 @@ body{
 /* ── lenovo grid ── */
 .lenovo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 22px;}
 .lenovo-item{
+    text-decoration:none;
+    color:inherit;
+    cursor:pointer;
     display:flex;
     align-items:center;
     gap:7px;
@@ -363,6 +366,8 @@ body{
     border-bottom:1px solid var(--line-soft);
 }
 .lenovo-item img{width:15px;height:15px;object-fit:contain;flex-shrink:0;}
+.lenovo-item:hover{background:rgba(14,165,233,.04);border-radius:3px;}
+.lenovo-item:hover .lenovo-valid{color:#0ea5e9;}
 .lenovo-valid{
     font-family:'JetBrains Mono',monospace;
     color:var(--muted);
@@ -527,9 +532,11 @@ body{
     .pill::before{width:4px;height:4px;background:#0ea5e9 !important;}
 
     .lenovo-grid{gap:0 14px;}
-    .lenovo-item{font-size:9px;padding:3px 0;color:#1e293b !important;border-bottom:1px solid #e5e7eb !important;}
+    .lenovo-item{font-size:9px;padding:3px 0;color:#1e293b !important;border-bottom:1px solid #e5e7eb !important;text-decoration:none !important;}
     .lenovo-item img{width:12px;height:12px;}
-    .lenovo-valid{font-size:7.5px;color:#6b7280 !important;}
+    .lenovo-item:hover{background:rgba(14,165,233,.04);border-radius:3px;}
+.lenovo-item:hover .lenovo-valid{color:#0ea5e9;}
+.lenovo-valid{font-size:7.5px;color:#6b7280 !important;}
 
     .footer{font-size:8px;margin-top:1rem;padding-top:.8rem;color:#6b7280 !important;border-top-color:#d1d5db !important;}
 
@@ -956,25 +963,25 @@ body{
                 </div>
                 <p class="cert-group-desc">Certificazioni sales e technical su data center, storage, cloud, workplace e servizi — valide fino a 11–12/2027</p>
                 <div class="lenovo-grid">
-                    <div class="lenovo-item"><img src="./badge/Lenovo%20Data%20Center%20Sales%20Certification.png" alt="">Data Center Sales<span class="lenovo-valid">12/27</span></div>
-                    <div class="lenovo-item"><img src="./badge/Lenovo%20Data%20Center%20Technical%20Certification.png" alt="">Data Center Technical<span class="lenovo-valid">12/27</span></div>
-                    <div class="lenovo-item"><img src="./badge/Lenovo%20Storage%20Sales%20Certification.png" alt="">Storage Sales<span class="lenovo-valid">12/27</span></div>
-                    <div class="lenovo-item"><img src="./badge/Lenovo%20Cloud%20Sales%20Certification.png" alt="">Cloud Sales<span class="lenovo-valid">11/27</span></div>
-                    <div class="lenovo-item"><img src="./badge/Lenovo%20Education%20Sales%20Certification.png" alt="">Education Sales<span class="lenovo-valid">11/27</span></div>
-                    <div class="lenovo-item"><img src="./badge/Lenovo%20Workstation%20Sales%20Certification.png" alt="">Workstation Sales<span class="lenovo-valid">11/27</span></div>
-                    <div class="lenovo-item"><img src="./badge/Lenovo%20Smart%20Collaboration%20Sales%20Certification.png" alt="">Smart Collaboration<span class="lenovo-valid">11/27</span></div>
-                    <div class="lenovo-item"><img src="./badge/Lenovo%20Data%20and%20Analytics%20Sales%20Certification.png" alt="">Data &amp; Analytics<span class="lenovo-valid">11/27</span></div>
-                    <div class="lenovo-item"><img src="./badge/Lenovo%20Digital%20Workplace%20Solutions%20Sales%20Certification.png" alt="">Digital Workplace<span class="lenovo-valid">11/27</span></div>
-                    <div class="lenovo-item"><img src="./badge/Lenovo%20Infrastructure%20Managed%20Services%20Sales%20Certification.png" alt="">Managed Services<span class="lenovo-valid">11/27</span></div>
-                    <div class="lenovo-item"><img src="./badge/Lenovo%20Infrastructure%20Professional%20Services%20Sales%20Certification.png" alt="">Professional Services<span class="lenovo-valid">11/27</span></div>
-                    <div class="lenovo-item"><img src="./badge/Lenovo%20Infrastructure%20Support%20Services%20Sales%20Certification.png" alt="">Support Services<span class="lenovo-valid">11/27</span></div>
-                    <div class="lenovo-item"><img src="./badge/Lenovo%20Client%20Virtualization%20Sales%20Certification.png" alt="">Client Virtualization<span class="lenovo-valid">11/27</span></div>
-                    <div class="lenovo-item"><img src="./badge/Lenovo%20TruScale%20Device%20as%20a%20Service%20Sales%20Certification.png" alt="">TruScale DaaS<span class="lenovo-valid">11/27</span></div>
-                    <div class="lenovo-item"><img src="./badge/Lenovo%20TruScale%20Infrastructure%20as%20a%20Service%20Sales%20Certification.png" alt="">TruScale IaaS<span class="lenovo-valid">11/27</span></div>
-                    <div class="lenovo-item"><img src="./badge/Lenovo%20Modern%20Workplace%20Sales%20Certification.png" alt="">Modern Workplace<span class="lenovo-valid">11/27</span></div>
-                    <div class="lenovo-item"><img src="./badge/Lenovo%20Intelligent%20Devices%20Support%20Services%20Sales%20Certification.png" alt="">Intelligent Devices Support<span class="lenovo-valid">11/27</span></div>
-                    <div class="lenovo-item"><img src="./badge/Lenovo%20Intelligent%20Devices%20Configuration%20Services%20Sales%20Certification.png" alt="">Intelligent Devices Config<span class="lenovo-valid">11/27</span></div>
-                    <div class="lenovo-item"><img src="./badge/Lenovo%20Sustainability%20Services%20Sales%20Certification.png" alt="">Sustainability Services<span class="lenovo-valid">11/27</span></div>
+                    <a href="https://cp.certmetrics.com/lenovo/en/public/verify/credential/F3VVGQDK1NEE1G5K" target="_blank" rel="noopener" class="lenovo-item"><img src="./badge/Lenovo%20Data%20Center%20Sales%20Certification.png" alt="">Data Center Sales<span class="lenovo-valid">12/27</span></a>
+                    <a href="https://cp.certmetrics.com/lenovo/en/public/verify/credential/DEVWCFR21FE11HG3" target="_blank" rel="noopener" class="lenovo-item"><img src="./badge/Lenovo%20Data%20Center%20Technical%20Certification.png" alt="">Data Center Technical<span class="lenovo-valid">12/27</span></a>
+                    <a href="https://cp.certmetrics.com/lenovo/en/public/verify/credential/026a977b8d5b488698de34ab9afdfb5f" target="_blank" rel="noopener" class="lenovo-item"><img src="./badge/Lenovo%20Storage%20Sales%20Certification.png" alt="">Storage Sales<span class="lenovo-valid">12/27</span></a>
+                    <a href="https://cp.certmetrics.com/lenovo/en/public/verify/credential/45a1264b63ff40e39a14ffd1d3b3cb08" target="_blank" rel="noopener" class="lenovo-item"><img src="./badge/Lenovo%20Cloud%20Sales%20Certification.png" alt="">Cloud Sales<span class="lenovo-valid">11/27</span></a>
+                    <a href="https://cp.certmetrics.com/lenovo/en/public/verify/credential/f87b1df679db4845b98734c95feea1fb" target="_blank" rel="noopener" class="lenovo-item"><img src="./badge/Lenovo%20Education%20Sales%20Certification.png" alt="">Education Sales<span class="lenovo-valid">11/27</span></a>
+                    <a href="https://cp.certmetrics.com/lenovo/en/public/verify/credential/b277f05716914fc2abb2efc0af0a2946" target="_blank" rel="noopener" class="lenovo-item"><img src="./badge/Lenovo%20Workstation%20Sales%20Certification.png" alt="">Workstation Sales<span class="lenovo-valid">11/27</span></a>
+                    <a href="https://cp.certmetrics.com/lenovo/en/public/verify/credential/013b8c75185d44bd95e7d1b1b9812c18" target="_blank" rel="noopener" class="lenovo-item"><img src="./badge/Lenovo%20Smart%20Collaboration%20Sales%20Certification.png" alt="">Smart Collaboration<span class="lenovo-valid">11/27</span></a>
+                    <a href="https://cp.certmetrics.com/lenovo/en/public/verify/credential/e1430c3afe344b7e96b4723322560cd7" target="_blank" rel="noopener" class="lenovo-item"><img src="./badge/Lenovo%20Data%20and%20Analytics%20Sales%20Certification.png" alt="">Data &amp; Analytics<span class="lenovo-valid">11/27</span></a>
+                    <a href="https://cp.certmetrics.com/lenovo/en/public/verify/credential/1ffbc819393846c99ec7dc08dc71aff0" target="_blank" rel="noopener" class="lenovo-item"><img src="./badge/Lenovo%20Digital%20Workplace%20Solutions%20Sales%20Certification.png" alt="">Digital Workplace<span class="lenovo-valid">11/27</span></a>
+                    <a href="https://cp.certmetrics.com/lenovo/en/public/verify/credential/H38VCEH122E1QL9X" target="_blank" rel="noopener" class="lenovo-item"><img src="./badge/Lenovo%20Infrastructure%20Managed%20Services%20Sales%20Certification.png" alt="">Managed Services<span class="lenovo-valid">11/27</span></a>
+                    <a href="https://cp.certmetrics.com/lenovo/en/public/verify/credential/bd6dd24655a44821a02e109bbda6ce47" target="_blank" rel="noopener" class="lenovo-item"><img src="./badge/Lenovo%20Infrastructure%20Professional%20Services%20Sales%20Certification.png" alt="">Professional Services<span class="lenovo-valid">11/27</span></a>
+                    <a href="https://cp.certmetrics.com/lenovo/en/public/verify/credential/GY96HDV1KJ1Q1CG1" target="_blank" rel="noopener" class="lenovo-item"><img src="./badge/Lenovo%20Infrastructure%20Support%20Services%20Sales%20Certification.png" alt="">Support Services<span class="lenovo-valid">11/27</span></a>
+                    <a href="https://cp.certmetrics.com/lenovo/en/public/verify/credential/f1e9bbbe63a34d80bdb55817893f87cc" target="_blank" rel="noopener" class="lenovo-item"><img src="./badge/Lenovo%20Client%20Virtualization%20Sales%20Certification.png" alt="">Client Virtualization<span class="lenovo-valid">11/27</span></a>
+                    <a href="https://cp.certmetrics.com/lenovo/en/public/verify/credential/4aae5cb506ad400c9c275a7f7c28649d" target="_blank" rel="noopener" class="lenovo-item"><img src="./badge/Lenovo%20TruScale%20Device%20as%20a%20Service%20Sales%20Certification.png" alt="">TruScale DaaS<span class="lenovo-valid">11/27</span></a>
+                    <a href="https://cp.certmetrics.com/lenovo/en/public/verify/credential/KJR5HFXC22Q1QQCN" target="_blank" rel="noopener" class="lenovo-item"><img src="./badge/Lenovo%20TruScale%20Infrastructure%20as%20a%20Service%20Sales%20Certification.png" alt="">TruScale IaaS<span class="lenovo-valid">11/27</span></a>
+                    <a href="https://cp.certmetrics.com/lenovo/en/public/verify/credential/2FLCDHHCCJR4QGGT" target="_blank" rel="noopener" class="lenovo-item"><img src="./badge/Lenovo%20Modern%20Workplace%20Sales%20Certification.png" alt="">Modern Workplace<span class="lenovo-valid">11/27</span></a>
+                    <a href="https://cp.certmetrics.com/lenovo/en/public/verify/credential/3VG3TDT11244QECW" target="_blank" rel="noopener" class="lenovo-item"><img src="./badge/Lenovo%20Intelligent%20Devices%20Support%20Services%20Sales%20Certification.png" alt="">Intelligent Devices Support<span class="lenovo-valid">11/27</span></a>
+                    <a href="https://cp.certmetrics.com/lenovo/en/public/verify/credential/L010C1D21BV41BK3" target="_blank" rel="noopener" class="lenovo-item"><img src="./badge/Lenovo%20Intelligent%20Devices%20Configuration%20Services%20Sales%20Certification.png" alt="">Intelligent Devices Config<span class="lenovo-valid">11/27</span></a>
+                    <a href="https://cp.certmetrics.com/lenovo/en/public/verify/credential/7FB4DVD2KFFQQBKK" target="_blank" rel="noopener" class="lenovo-item"><img src="./badge/Lenovo%20Sustainability%20Services%20Sales%20Certification.png" alt="">Sustainability Services<span class="lenovo-valid">11/27</span></a>
                 </div>
             </div>
 
