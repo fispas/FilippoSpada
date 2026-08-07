@@ -549,6 +549,19 @@ body{
             <li><span class="ic">&#9679;</span><span>Patente B — automunito</span></li>
         </ul>
 
+        <h2>Windows &amp; Active Directory</h2>
+        <div class="tags">
+            <span class="tag core">Windows Server</span>
+            <span class="tag core">Active Directory</span>
+            <span class="tag core">AD Hardening</span>
+            <span class="tag core">AD CS / PKI</span>
+            <span class="tag">Group Policy</span>
+            <span class="tag">DNS · DHCP</span>
+            <span class="tag">FSMO Roles</span>
+            <span class="tag">RDS / Terminal Server</span>
+            <span class="tag">FSLogix</span>
+        </div>
+
         <h2>Virtualizzazione</h2>
         <div class="tags">
             <span class="tag core">VMware vSphere</span>
@@ -559,13 +572,8 @@ body{
             <span class="tag">Failover Cluster</span>
         </div>
 
-        <h2>Sistemi operativi</h2>
+        <h2>Linux</h2>
         <div class="tags">
-            <span class="tag core">Windows Server</span>
-            <span class="tag core">Active Directory</span>
-            <span class="tag">Group Policy</span>
-            <span class="tag">DNS · DHCP</span>
-            <span class="tag">RDS / Terminal Server</span>
             <span class="tag core">Linux</span>
             <span class="tag">Bash · CLI</span>
         </div>
@@ -595,7 +603,6 @@ body{
             <span class="tag">VPN site-to-site</span>
             <span class="tag">VLAN · TCP/IP</span>
             <span class="tag">NFS · CIFS/SMB</span>
-            <span class="tag">AD Hardening</span>
         </div>
 
         <h2>Cloud</h2>
@@ -636,8 +643,9 @@ body{
             <h1 class="name">Filippo Antonino Spada</h1>
             <p class="tagline">System &amp; Network Engineer — Enterprise Infrastructure &amp; Security</p>
             <p class="summary">
-                Sistemista senior con oltre sei anni di esperienza su infrastrutture aziendali eterogenee:
-                virtualizzazione multi-hypervisor, Active Directory, storage e backup, reti e sicurezza perimetrale.
+                Sistemista senior con oltre sei anni di esperienza su infrastrutture aziendali Windows-centriche:
+                Active Directory, hardening del dominio, PKI e Certification Authority, farm RDS con FSLogix,
+                virtualizzazione multi-hypervisor, storage e backup, reti e sicurezza perimetrale.
                 Background da sviluppatore full stack che porto nel lavoro quotidiano automatizzando le operazioni
                 ripetitive e costruendo strumenti interni su misura.
             </p>
@@ -662,6 +670,35 @@ body{
                 </div>
 
                 <div class="job-block">
+                    <div class="jb-label">Windows Server, Active Directory e hardening</div>
+                    <div class="jb-text">
+                        Amministrazione avanzata di ambienti <strong>Windows Server</strong> multi-sede con domini
+                        <strong>Active Directory</strong> complessi: progettazione della struttura OU e delega delle
+                        autorizzazioni, definizione e manutenzione di Group Policy per la configurazione centralizzata
+                        di workstation e server, gestione dei ruoli FSMO, replica tra domain controller e trust
+                        inter-dominio, servizi DNS e DHCP integrati.
+                        <br><br>
+                        <strong>Hardening dell'infrastruttura di dominio:</strong> applicazione sistematica di best practice
+                        di sicurezza — tiering model per la segregazione degli account amministrativi, LAPS per la
+                        rotazione automatica delle password locali, audit policy avanzate e monitoraggio degli eventi
+                        di sicurezza, riduzione della superficie di attacco tramite disabilitazione di protocolli legacy
+                        (NTLMv1, SMBv1, LLMNR) e rafforzamento delle policy Kerberos.
+                        <br><br>
+                        <strong>Active Directory Certificate Services (AD CS):</strong> installazione e gestione di
+                        Certification Authority enterprise integrate con Active Directory — emissione e rinnovo
+                        automatico di certificati per autenticazione utenti e computer, enrollment via auto-enrollment
+                        e template personalizzati, certificati per server web interni e LDAPS.
+                        <br><br>
+                        <strong>Remote Desktop Services e FSLogix:</strong> progettazione e deploy di farm
+                        <strong>Terminal Server / RDS</strong> — session host, broker di connessione, gateway e licensing —
+                        per l'accesso remoto multi-utente agli applicativi gestionali. Implementazione di
+                        <strong>FSLogix Profile Container</strong> per la gestione centralizzata dei profili utente su
+                        share di rete, con riduzione dei tempi di logon e persistenza completa delle impostazioni
+                        applicative tra sessioni e host differenti.
+                    </div>
+                </div>
+
+                <div class="job-block">
                     <div class="jb-label">Virtualizzazione multi-hypervisor</div>
                     <div class="jb-text">
                         Progettazione, installazione e upgrade di infrastrutture <strong>VMware vSphere</strong> (dalla 5.x alla 8.x) con
@@ -669,16 +706,6 @@ body{
                         Gestione di ambienti <strong>Microsoft Hyper-V</strong> con Failover Cluster e SCVMM, e di cluster
                         <strong>Proxmox VE</strong> su storage condiviso per ambienti a costo contenuto. Migrazioni P2V e V2V
                         tra hypervisor differenti e consolidamento di server fisici legacy.
-                    </div>
-                </div>
-
-                <div class="job-block">
-                    <div class="jb-label">Windows Server, Active Directory e RDS</div>
-                    <div class="jb-text">
-                        Amministrazione avanzata di domini <strong>Active Directory</strong>: struttura OU, Group Policy, DNS, DHCP,
-                        ruoli FSMO, replica tra domain controller e interventi di hardening sulla sicurezza del dominio.
-                        Progettazione e deploy di farm <strong>Terminal Server / RDS</strong> — session host, broker di connessione,
-                        gateway, profili utente e licensing — per accesso remoto multi-utente agli applicativi gestionali.
                     </div>
                 </div>
 
